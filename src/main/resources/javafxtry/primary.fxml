@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1920.0" prefWidth="2048.0" styleClass="bg-color" stylesheets="@css/primary.css" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtry.PrimaryController">
+   <top>
+      <HBox styleClass="bg-color" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar prefHeight="42.0" prefWidth="62.0" styleClass="bg-color">
+              <menus>
+                <Menu mnemonicParsing="false" styleClass="bg-color" text="...">
+                  <items>
+                        <MenuItem id="OpenMenuItem" mnemonicParsing="false" onAction="#openFile" text="Open" />
+                        <MenuItem id="SaveMenuItem" mnemonicParsing="false" onAction="#saveImage" text="Save" />
+                    <MenuItem id="CloseMenuItem" mnemonicParsing="false" onAction="#closeImage" text="Close" />
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem id="AboutMenuItem" mnemonicParsing="false" onAction="#about" text="About" />
+                        </items>
+                      </Menu>
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Pane prefHeight="42.0" prefWidth="913.0" />
+            <Pane prefHeight="42.0" prefWidth="122.0">
+               <children>
+                  <ImageView id="CutOp" fitHeight="26.0" fitWidth="26.0" layoutX="40.0" layoutY="7.0" onMousePressed="#ImageCutOp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/cut.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="RotateOp" fitHeight="26.0" fitWidth="26.0" layoutX="78.0" layoutY="6.0" onMousePressed="#ImageRotateOp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/rotate.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="TextIamgeOp" fitHeight="26.0" fitWidth="26.0" layoutX="4.0" layoutY="6.0" onMousePressed="#ImageTextOp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/text.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <Pane fx:id="imagePane" id="img-pane" prefHeight="200.0" prefWidth="200.0" styleClass="bg-color" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="mainImage" fitHeight="939.0" fitWidth="1024.0" layoutX="512.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

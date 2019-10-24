@@ -1,0 +1,13 @@
+.img-style {
+    -fx-background-position: center center;
+    -fx-background-size: cover, auto;
+}
+
+.bg-color{
+    -fx-background-color: #696969;
+}
+
+#img-pane{
+    -fx-background-size: cover, auto;
+}
+
