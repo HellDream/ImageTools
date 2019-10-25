@@ -4,6 +4,7 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
@@ -22,11 +23,14 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Optional;
+import java.util.ResourceBundle;
 
+import static javafxtry.imgfrontends.ImageManager.IMAGE_VIEW_PARAMS;
 import static javafxtry.imgfrontends.ImageManager.locateImg;
 
-public class PrimaryController {
+public class PrimaryController implements Initializable {
     public ImageView mainImage;
     public Pane imagePane;
     //    public ScrollPane scrollPane = new ScrollPane();
@@ -115,6 +119,23 @@ public class PrimaryController {
         }
     }
 
+    @FXML
+    public void ImageRotateOp(MouseEvent event) throws FileNotFoundException {
+        if(originImagePath==null) return;
+        if (event.isPrimaryButtonDown()) {
+            if(tmpImagePath==null)
+                tmpImagePath = imageManager.rotate(originImagePath, 90);
+            else{
+                tmpImagePath = imageManager.rotate(tmpImagePath, 90);
+            }
+            if(tmpImagePath==null) throw new FileNotFoundException();
+            System.out.println(tmpImagePath);
+            mainImage.setImage(new Image(new FileInputStream(new File(tmpImagePath))));
+            locateImg(this.mainImage);
+            this.isSave = false;
+        }
+    }
+
     private void openImageCutStage() throws IOException {
         Stage stage = new Stage();
         stage.setTitle("Cutting Image");
@@ -138,24 +159,13 @@ public class PrimaryController {
 
     }
 
-    @FXML
-    public void ImageRotateOp(MouseEvent event) throws FileNotFoundException {
-        if(originImagePath==null) return;
-        if (event.isPrimaryButtonDown()) {
-            if(tmpImagePath==null)
-                tmpImagePath = imageManager.rotate(originImagePath, 90);
-            else{
-                tmpImagePath = imageManager.rotate(tmpImagePath, 90);
-            }
-            if(tmpImagePath==null) throw new FileNotFoundException();
-            System.out.println(tmpImagePath);
-            mainImage.setImage(new Image(new FileInputStream(new File(tmpImagePath))));
-            locateImg(this.mainImage);
-            this.isSave = false;
-        }
-    }
-
     public void ImageTextOp(MouseEvent event) {
 
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        IMAGE_VIEW_PARAMS.put("fitHeight",mainImage.getFitHeight());
+        IMAGE_VIEW_PARAMS.put("fitWidth", mainImage.getFitWidth());
     }
 }

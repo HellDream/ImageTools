@@ -33,23 +33,14 @@ public class ImageCutController implements Initializable {
 
     public void shadeImage() {
         System.out.println(cutMainImage.toString());
-        shadeRectangle.setHeight(cutMainImage.getImage().getHeight());
-        shadeRectangle.setWidth(cutMainImage.getImage().getWidth());
-//        locateShadeRectangle(cutMainImage.getImage());
-
+        shadeRectangle.setHeight(cutMainImage.getFitHeight());
+        shadeRectangle.setWidth(cutMainImage.getFitWidth());
+        shadeRectangle.setX(cutMainImage.getX());
+        shadeRectangle.setY(cutMainImage.getY());
         shadeRectangle.setLayoutX(cutMainImage.getLayoutX());
         shadeRectangle.setLayoutY(cutMainImage.getLayoutY());
         shadeRectangle.setFill(Color.BLACK);
     }
 
-    private void locateShadeRectangle(Image img) {
-        double ratioX = shadeRectangle.getWidth() / img.getWidth();
-        double ratioY = shadeRectangle.getHeight() / img.getHeight();
-        double reducCoeff = ratioX >= ratioY? ratioY:ratioX;
-        double w = img.getWidth() * reducCoeff;
-        double h = img.getHeight() * reducCoeff;
-        shadeRectangle.setX((shadeRectangle.getWidth() - w) / 2);
-        shadeRectangle.setY((shadeRectangle.getHeight() - h) / 2);
-    }
 
 }

@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97bfec8c-11be-4f24-aa2f-27ce93e4e9ab" name="Default Changelist" comment="" />
+    <list default="true" id="97bfec8c-11be-4f24-aa2f-27ce93e4e9ab" name="Default Changelist" comment="Image Crop shade rectangle">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caches/606056123188800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caches/606056927453400.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caches/606057480878100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/ImageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/ImageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/PrimaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javafxtry/PrimaryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javafxtry/primary.fxml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,34 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
-                <element signature="e#648#649#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/image/ImageView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="772">
-              <caret line="495" column="28" selection-start-line="495" selection-start-column="28" selection-end-line="495" selection-end-column="28" />
+            <state relative-caret-position="-1701">
+              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -53,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/ImageManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="12" column="48" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="48" />
+            <state relative-caret-position="336">
+              <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,19 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Java/jdk1.8.0_131/javafx-src.zip!/javafx/fxml/Initializable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="371">
+              <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,8 +64,8 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/javafxtry/primary.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+            <state relative-caret-position="310">
+              <caret line="57" column="73" selection-start-line="57" selection-start-column="69" selection-end-line="57" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -113,6 +90,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Zhenyu Ye" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -129,17 +114,17 @@
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/SecondaryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/ImageUtilsManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/ImageVariables.java" />
-        <option value="$PROJECT_DIR$/src/main/java/javafxtry/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/ImageManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/StageManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/Ex94.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/resources/javafxtry/ControlView.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/resources/javafxtry/imageCut.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/javafxtry/primary.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/ImageManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/javafxtry/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java" />
       </list>
     </option>
   </component>
@@ -178,6 +163,7 @@
     <option name="width" value="1940" />
     <option name="height" value="1050" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -258,6 +244,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/javafxtry" />
@@ -384,18 +371,17 @@
       <workItem from="1571559509104" duration="57000" />
       <workItem from="1571722283548" duration="5406000" />
       <workItem from="1571793500800" duration="3965000" />
-      <workItem from="1571879829204" duration="13875000" />
+      <workItem from="1571879829204" duration="16562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68901000" />
+    <option name="totallyTimeSpent" value="71588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22587131" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -404,7 +390,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32931727" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.2356091" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.17292225" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.36278448" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -414,7 +400,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067025" side_tool="true" weight="0.13654618" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32931727" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32841823" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -428,6 +414,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Image Crop shade rectangle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Image Crop shade rectangle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -622,20 +612,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Java/jdk1.8.0_131/javafx-src.zip!/javafx/fxml/Initializable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/image/ImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="772">
+          <caret line="495" column="28" selection-start-line="495" selection-start-column="28" selection-end-line="495" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -647,50 +646,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/image/ImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="772">
-          <caret line="495" column="28" selection-start-line="495" selection-start-column="28" selection-end-line="495" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/javafxtry/primary.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        <state relative-caret-position="310">
+          <caret line="57" column="73" selection-start-line="57" selection-start-column="69" selection-end-line="57" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/ImageManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="48" />
+        <state relative-caret-position="336">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="371">
+          <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1701">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
         </state>
       </provider>
     </entry>

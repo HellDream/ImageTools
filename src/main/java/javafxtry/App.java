@@ -9,6 +9,8 @@ import javafxtry.imgbackends.utils.Constants;
 
 import java.io.IOException;
 
+import static javafxtry.imgfrontends.ImageManager.IMAGE_VIEW_PARAMS;
+
 /**
  * JavaFX App
  */
