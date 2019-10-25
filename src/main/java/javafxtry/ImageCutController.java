@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -43,4 +44,17 @@ public class ImageCutController implements Initializable {
     }
 
 
+    class CropHander{
+        public void onPress(MouseEvent event){
+
+        }
+
+        public void onDrag(MouseEvent event){
+
+        }
+
+        public void onRelease(MouseEvent event){
+
+        }
+    }
 }
