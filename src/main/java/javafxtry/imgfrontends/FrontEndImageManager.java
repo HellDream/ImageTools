@@ -2,13 +2,17 @@ package javafxtry.imgfrontends;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.PixelReader;
+import javafx.scene.image.WritableImage;
+import javafx.scene.shape.Rectangle;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Stack;
 
-public class ImageManager {
+public class FrontEndImageManager {
     public static final Map<String, Object> IMAGE_VIEW_PARAMS = new HashMap<>();
-
+    public static Stack<Image> imageStack = new Stack<>();
     public static void locateImg(ImageView imageView) {
         Image img = imageView.getImage();
         if (img != null) {
@@ -18,7 +22,7 @@ public class ImageManager {
             double ratioX = (double)IMAGE_VIEW_PARAMS.get("fitWidth") / img.getWidth();
             double ratioY = (double)IMAGE_VIEW_PARAMS.get("fitHeight") / img.getHeight();
 
-            double reducCoeff = 0;
+            double reducCoeff;
             if (ratioX >= ratioY) {
                 reducCoeff = ratioY;
             } else {
@@ -33,6 +37,15 @@ public class ImageManager {
             imageView.setFitWidth(w);
             imageView.setFitHeight(h);
         }
+    }
+
+    public static WritableImage writeImg(PixelReader reader, ImageView imageView, Rectangle cutView){
+        double ratioX = (double)IMAGE_VIEW_PARAMS.get("fitWidth") / imageView.getImage().getWidth();
+        double ratioY = (double)IMAGE_VIEW_PARAMS.get("fitHeight") / imageView.getImage().getHeight();
+        double reducCoeff = ratioX >= ratioY? ratioY:ratioX;
+        double originWidth = cutView.getWidth() / reducCoeff;
+        double originHeight = cutView.getHeight() / reducCoeff;
+        return new WritableImage(reader, (int)cutView.getX(),(int)cutView.getY(), (int)originWidth, (int)originHeight);
     }
 
 }

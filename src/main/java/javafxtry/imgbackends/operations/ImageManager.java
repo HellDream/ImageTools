@@ -55,10 +55,10 @@ public class ImageManager {
      * @description: cut Image
      * @param: filepath, x1, y1 -- start axles, x2, y2 -- end axles
      */
-    public String cutImage(String filepath, int x1, int y1, int x2, int y2) {
+    public String cutImage(String filepath, int x1, int y1, int width, int height) {
         IMOperation operation = new IMOperation();
         operation.addImage(filepath);
-        operation.crop(x2 - x1, y2 - y1, x1, y1);
+        operation.crop(width, height, x1, y1);
         String tmpFilepath = Constants.CACHES + DateTimeUtils.getCurrentDateTime() + ".jpg";
         operation.addImage(tmpFilepath);
         try {
@@ -105,4 +105,11 @@ public class ImageManager {
         return tmpFilepath;
     }
 
+    public static void main(String[] args) {
+        Constants.initialize("D:\\ImageMagick-7.0.8-Q16");
+        String filePath = "C:\\Users\\YU YE\\Pictures\\1.jpg";
+        ImageManager manager = ImageManager.getInstance();
+        String s = manager.cutImage(filePath, (int)(631.125/0.75),(int)(214/0.75),(int)(314/0.75),(int)(437/0.75));
+        System.out.println(s);
+    }
 }

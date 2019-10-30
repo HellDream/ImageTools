@@ -27,8 +27,8 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-import static javafxtry.imgfrontends.ImageManager.IMAGE_VIEW_PARAMS;
-import static javafxtry.imgfrontends.ImageManager.locateImg;
+import static javafxtry.imgfrontends.FrontEndImageManager.IMAGE_VIEW_PARAMS;
+import static javafxtry.imgfrontends.FrontEndImageManager.locateImg;
 
 public class PrimaryController implements Initializable {
     public ImageView mainImage;
@@ -61,8 +61,14 @@ public class PrimaryController implements Initializable {
 
         //show selected Image
         Image img = new Image(new FileInputStream(originFile));
+        System.out.println("width: "+img.getWidth());
+        System.out.println("height: "+img.getHeight());
         mainImage.setImage(img);
         locateImg(this.mainImage);
+        System.out.println("view width: "+mainImage.getFitWidth());
+        System.out.println("view height: "+mainImage.getFitHeight());
+        System.out.println("view X: "+mainImage.getX());
+        System.out.println("view Y: "+mainImage.getY());
     }
 
 
