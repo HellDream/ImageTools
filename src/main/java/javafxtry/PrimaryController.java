@@ -16,6 +16,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafxtry.imgbackends.operations.ImageManager;
 import javafxtry.imgbackends.utils.Constants;
+import javafxtry.imgfrontends.FrontEndImageManager;
 import javafxtry.imgfrontends.StageManager;
 
 import javax.imageio.ImageIO;
@@ -35,12 +36,12 @@ public class PrimaryController implements Initializable, ImageCommand {
     public Pane imagePane;
     //    public ScrollPane scrollPane = new ScrollPane();
 //    public StackPane stackPane;
-    private String originImagePath = null;
-    private String tmpImagePath = null;
+//    private String originImagePath = null;
+//    private String tmpImagePath = null;
     private boolean isSave = true;
     private String recentDir = null;
     private ImageManager imageManager = ImageManager.getInstance();
-
+    private FrontEndImageManager frontEndManager = FrontEndImageManager.getInstance();
     @FXML
     private void openFile() throws IOException {
         FileChooser fileChooser = new FileChooser();
@@ -56,20 +57,21 @@ public class PrimaryController implements Initializable, ImageCommand {
         );
         File originFile = fileChooser.showOpenDialog(App.stage);
         recentDir = originFile.getParent();
-        this.originImagePath = originFile.getPath();
-        tmpImagePath = null;
-        System.out.println(originImagePath);
-
+//        this.originImagePath = originFile.getPath();
+//        tmpImagePath = null;
+//        System.out.println(originImagePath);
+        String path = originFile.getPath();
         //show selected Image
         Image img = new Image(new FileInputStream(originFile));
-        System.out.println("width: "+img.getWidth());
-        System.out.println("height: "+img.getHeight());
+        frontEndManager.add(path, img);
         mainImage.setImage(img);
         locateImg(this.mainImage);
-        System.out.println("view width: "+mainImage.getFitWidth());
-        System.out.println("view height: "+mainImage.getFitHeight());
-        System.out.println("view X: "+mainImage.getX());
-        System.out.println("view Y: "+mainImage.getY());
+//        System.out.println("width: "+img.getWidth());
+//        System.out.println("height: "+img.getHeight());
+//        System.out.println("view width: "+mainImage.getFitWidth());
+//        System.out.println("view height: "+mainImage.getFitHeight());
+//        System.out.println("view X: "+mainImage.getX());
+//        System.out.println("view Y: "+mainImage.getY());
     }
 
 
@@ -120,7 +122,8 @@ public class PrimaryController implements Initializable, ImageCommand {
     @FXML
     public void ImageCutOp(MouseEvent event) throws IOException {
         if (event.getClickCount()!=0) {
-            if (originImagePath != null) {
+//            if (originImagePath != null) {
+            if (frontEndManager.getImageSize() != 0) {
                 openImageCutStage();
             }
         }
@@ -128,18 +131,17 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     @FXML
     public void ImageRotateOp(MouseEvent event) throws FileNotFoundException {
-        if(originImagePath==null) return;
         if (event.isPrimaryButtonDown()) {
-            if(tmpImagePath==null)
-                tmpImagePath = imageManager.rotate(originImagePath, 90);
-            else{
-                tmpImagePath = imageManager.rotate(tmpImagePath, 90);
-            }
-            if(tmpImagePath==null) throw new FileNotFoundException();
-            System.out.println(tmpImagePath);
-            mainImage.setImage(new Image(new FileInputStream(new File(tmpImagePath))));
-            locateImg(this.mainImage);
-            this.isSave = false;
+//            if(tmpImagePath==null)
+//                tmpImagePath = imageManager.rotate(originImagePath, 90);
+//            else{
+//                tmpImagePath = imageManager.rotate(tmpImagePath, 90);
+//            }
+//            if(tmpImagePath==null) throw new FileNotFoundException();
+//            System.out.println(tmpImagePath);
+//            mainImage.setImage(new Image(new FileInputStream(new File(tmpImagePath))));
+//            locateImg(this.mainImage);
+//            this.isSave = false;
         }
     }
 
@@ -178,7 +180,7 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     @Override
     public void redo() {
-        
+
     }
 
     @Override

@@ -15,12 +15,20 @@ public class FrontEndImageManager {
     private Stack<String> imagePathCache;
     private Stack<Image> imageStackCache;
     private int imageSize = 0;
+    private static FrontEndImageManager manager = null;
 
-    public FrontEndImageManager(){
+    private FrontEndImageManager(){
         imagePaths = new Stack<>();
         imageStack = new Stack<>();
         imagePathCache = new Stack<>();
         imageStackCache = new Stack<>();
+    }
+
+    public static FrontEndImageManager getInstance(){
+        if(manager==null){
+            manager = new FrontEndImageManager();
+        }
+        return manager;
     }
 
     // modified to local method
@@ -43,7 +51,13 @@ public class FrontEndImageManager {
             imageView.setY(((double)IMAGE_VIEW_PARAMS.get("fitHeight") - h) / 2);
             imageView.setFitWidth(w);
             imageView.setFitHeight(h);
+            double ratio = imageView.getFitHeight() / img.getHeight();
+            IMAGE_RATIO.put(img, ratio);
         }
+    }
+
+    public int getImageSize(){
+        return imageSize;
     }
 
     public void add(String imagePath, Image image){

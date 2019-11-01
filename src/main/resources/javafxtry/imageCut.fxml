@@ -8,9 +8,9 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1920.0" prefWidth="2048.0" styleClass="bg-color" stylesheets="@css/primary.css" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtry.ImageCutController">
     <top>
-        <HBox style="-fx-background-color: #FF0000;" BorderPane.alignment="CENTER">
+        <HBox BorderPane.alignment="CENTER">
             <children>
-                <Pane prefHeight="42.0" prefWidth="990.0" style="-fx-background-color: #FFFFFF;" />
+                <Pane prefHeight="42.0" prefWidth="990.0" />
                 <Pane prefHeight="42.0" prefWidth="122.0">
                     <children>
                         <ImageView id="aboardOp" fitHeight="26.0" fitWidth="26.0" layoutX="78.0" layoutY="6.0" onMousePressed="#cropAboard" pickOnBounds="true" preserveRatio="true">
