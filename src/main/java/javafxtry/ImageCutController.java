@@ -19,7 +19,7 @@ import java.util.ResourceBundle;
 import static javafxtry.imgfrontends.FrontEndImageManager.locateImg;
 
 
-public class ImageCutController implements Initializable {
+public class ImageCutController implements Initializable, ImageCommand {
 
     public ImageView cutMainImage;
     public Pane imagePane;
@@ -73,7 +73,6 @@ public class ImageCutController implements Initializable {
 
     // todo:
     public void cropSave(MouseEvent event) throws Exception {
-        PixelReader reader = cutMainImage.getImage().getPixelReader();
         System.out.println("Image Width:" + cutMainImage.getImage().getWidth()); // 704.25
         System.out.println("Image Height:" + cutMainImage.getImage().getHeight()); //939
         System.out.println("ImageView Width:" + cutMainImage.getFitWidth());
@@ -101,7 +100,16 @@ public class ImageCutController implements Initializable {
         locateImg(cutMainImage);
         initial();
 
-//        WritableImage wImage = new WritableImage(reader,)
+    }
+
+    @Override
+    public void redo() {
+
+    }
+
+    @Override
+    public void undo() {
+
     }
 
 

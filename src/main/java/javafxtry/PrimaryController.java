@@ -30,7 +30,7 @@ import java.util.ResourceBundle;
 import static javafxtry.imgfrontends.FrontEndImageManager.IMAGE_VIEW_PARAMS;
 import static javafxtry.imgfrontends.FrontEndImageManager.locateImg;
 
-public class PrimaryController implements Initializable {
+public class PrimaryController implements Initializable, ImageCommand {
     public ImageView mainImage;
     public Pane imagePane;
     //    public ScrollPane scrollPane = new ScrollPane();
@@ -57,6 +57,7 @@ public class PrimaryController implements Initializable {
         File originFile = fileChooser.showOpenDialog(App.stage);
         recentDir = originFile.getParent();
         this.originImagePath = originFile.getPath();
+        tmpImagePath = null;
         System.out.println(originImagePath);
 
         //show selected Image
@@ -173,5 +174,15 @@ public class PrimaryController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         IMAGE_VIEW_PARAMS.put("fitHeight",mainImage.getFitHeight());
         IMAGE_VIEW_PARAMS.put("fitWidth", mainImage.getFitWidth());
+    }
+
+    @Override
+    public void redo() {
+        
+    }
+
+    @Override
+    public void undo() {
+
     }
 }
