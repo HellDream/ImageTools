@@ -2,6 +2,7 @@ package javafxtry.imgfrontends;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.util.Pair;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -78,6 +79,10 @@ public class FrontEndImageManager {
         imagePaths.push(imagePathCache.pop());
         imageStack.push(imageStackCache.pop());
         imageSize++;
+    }
+
+    public Pair<String, Image> getTopImage(){
+        return new Pair<>(imagePaths.peek(), imageStack.peek());
     }
 
 

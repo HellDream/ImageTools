@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Pair;
 import javafxtry.imgbackends.operations.ImageManager;
 import javafxtry.imgbackends.utils.Constants;
 import javafxtry.imgfrontends.FrontEndImageManager;
@@ -142,22 +143,34 @@ public class PrimaryController implements Initializable, ImageCommand {
 //            mainImage.setImage(new Image(new FileInputStream(new File(tmpImagePath))));
 //            locateImg(this.mainImage);
 //            this.isSave = false;
+            Pair<String, Image> topImage = frontEndManager.getTopImage();
+            if(topImage.getKey()==null)
+                throw new FileNotFoundException();
+            String imagePath = topImage.getKey();
+            String newImagePath = imageManager.rotate(imagePath, 90);
+            Image newImage = new Image(new FileInputStream(new File(newImagePath)));
+            frontEndManager.add(newImagePath, newImage);
+            mainImage.setImage(newImage);
+            locateImg(mainImage);
+            this.isSave = false;
         }
     }
 
     private void openImageCutStage() throws IOException {
+        if(frontEndManager.getImageSize()==0)
+            return;
         Stage stage = new Stage();
         stage.setTitle("Cutting Image");
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("imageCut.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
-        stage.setOnShowing(event -> {
-            ImageCutController controller = fxmlLoader.getController();
-            controller.setImage(this.mainImage.getImage());
-            locateImg(controller.cutMainImage);
-            controller.shadeImage();
-        });
+//        stage.setOnShowing(event -> {
+//            ImageCutController controller = fxmlLoader.getController();
+//            controller.setImage(this.mainImage.getImage());
+//            locateImg(controller.cutMainImage);
+//            controller.shadeImage();
+//        });
         stage.show();
 //        App.stage.showAndWait();
         StageManager.STAGE.put("ImageCutStage",stage);

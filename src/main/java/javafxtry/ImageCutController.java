@@ -10,7 +10,9 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
+import javafx.util.Pair;
 import javafxtry.imgbackends.operations.ImageManager;
+import javafxtry.imgfrontends.FrontEndImageManager;
 
 import java.io.FileInputStream;
 import java.net.URL;
@@ -30,14 +32,20 @@ public class ImageCutController implements Initializable, ImageCommand {
     @FXML
     private Shape shadowShape;
 
+    private FrontEndImageManager frontEndManager = FrontEndImageManager.getInstance();
+
     public void setImage(Image image) {
         cutMainImage.setImage(image);
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        CropHandler handler = new CropHandler();
+        Pair<String, Image> topImage = frontEndManager.getTopImage();
+        cutMainImage.setImage(topImage.getValue());
+        locateImg(cutMainImage);
         shadeRectangle = new Rectangle();
+        shadeImage();
+        CropHandler handler = new CropHandler();
         rectangleView = new Rectangle();
         imagePane.addEventFilter(MouseEvent.MOUSE_PRESSED, handler.onPress());
         imagePane.addEventFilter(MouseEvent.MOUSE_DRAGGED, handler.onDrag());
@@ -92,10 +100,12 @@ public class ImageCutController implements Initializable, ImageCommand {
         int actualY = (int)(relateY/ratio);
         int actualW = (int)(rectangleView.getWidth()/ratio);
         int actualH = (int)(rectangleView.getHeight()/ratio);
-        String tmpFileStr = manager.cutImage(
-                "C:\\Users\\YU YE\\Pictures\\1.jpg",
+        Pair<String, Image> topImage = frontEndManager.getTopImage();
+        String newImagePath = manager.cutImage(
+                topImage.getKey(),
                 actualX, actualY, actualW, actualH);
-        Image newImage = new Image(new FileInputStream(tmpFileStr));
+        Image newImage = new Image(new FileInputStream(newImagePath));
+        frontEndManager.add(newImagePath, newImage);
         cutMainImage.setImage(newImage);
         locateImg(cutMainImage);
         initial();
