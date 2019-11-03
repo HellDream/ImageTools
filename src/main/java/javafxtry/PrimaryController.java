@@ -150,7 +150,10 @@ public class PrimaryController implements Initializable, ImageCommand {
         StageManager.STAGE.put("ImageCutStage",stage);
         StageManager.CONTROLLER.put("PrimaryController",this);
         stage.setOnCloseRequest(e->{
-
+            Pair<String, Image> topImage = frontEndManager.getTopImage();
+            mainImage.setImage(topImage.getValue());
+            locateImg(mainImage);
+            StageManager.STAGE.remove("ImageCutStage");
         });
 
     }
@@ -173,5 +176,9 @@ public class PrimaryController implements Initializable, ImageCommand {
     @Override
     public void undo() {
 
+    }
+
+    public void setSave(boolean b) {
+        this.isSave = b;
     }
 }

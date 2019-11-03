@@ -10,9 +10,11 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
+import javafx.stage.Stage;
 import javafx.util.Pair;
 import javafxtry.imgbackends.operations.ImageManager;
 import javafxtry.imgfrontends.FrontEndImageManager;
+import javafxtry.imgfrontends.StageManager;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -90,8 +92,14 @@ public class ImageCutController implements Initializable, ImageCommand {
 
     // todo:
     public void cropSave(MouseEvent event) throws Exception {
-
-
+        Pair<String, Image> topImage = frontEndManager.getTopImage();
+        PrimaryController controller = (PrimaryController)StageManager.CONTROLLER.get("PrimaryController");
+        if(!topImage.getValue().equals(originImage)){
+            controller.mainImage.setImage(topImage.getValue());
+            controller.setSave(false);
+        }
+        Stage currentStage = StageManager.STAGE.get("ImageCutStage");
+        currentStage.close();
     }
 
     @Override

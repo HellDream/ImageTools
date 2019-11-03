@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafxtry.imgbackends.utils.Constants;
+import javafxtry.imgfrontends.FrontEndImageManager;
+import javafxtry.imgfrontends.StageManager;
 
 import java.io.IOException;
 
@@ -26,6 +28,7 @@ public class App extends Application {
         scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.show();
+        StageManager.STAGE.put("PrimaryStage", stage);
     }
 
     private void closeApp(FXMLLoader fxmlLoader) {
