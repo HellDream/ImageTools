@@ -33,10 +33,6 @@ public class App extends Application {
         controller.closeImage();
     }
 
-//    static void setRoot(String fxml) throws IOException {
-//        scene.setRoot(loadFXML(fxml));
-//    }
-//
     public static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
@@ -46,5 +42,4 @@ public class App extends Application {
         Constants.initialize("D:\\ImageMagick-7.0.8-Q16");
         launch();
     }
-
 }

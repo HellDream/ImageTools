@@ -15,6 +15,7 @@ import javafxtry.imgbackends.operations.ImageManager;
 import javafxtry.imgfrontends.FrontEndImageManager;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -31,7 +32,7 @@ public class ImageCutController implements Initializable, ImageCommand {
     private Rectangle shadeRectangle;
     @FXML
     private Shape shadowShape;
-
+    private Image originImage;
     private FrontEndImageManager frontEndManager = FrontEndImageManager.getInstance();
 
     public void setImage(Image image) {
@@ -41,10 +42,11 @@ public class ImageCutController implements Initializable, ImageCommand {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Pair<String, Image> topImage = frontEndManager.getTopImage();
+        originImage = topImage.getValue();
         cutMainImage.setImage(topImage.getValue());
         locateImg(cutMainImage);
         shadeRectangle = new Rectangle();
-        shadeImage();
+//        shadeImage();
         CropHandler handler = new CropHandler();
         rectangleView = new Rectangle();
         imagePane.addEventFilter(MouseEvent.MOUSE_PRESSED, handler.onPress());
@@ -76,39 +78,19 @@ public class ImageCutController implements Initializable, ImageCommand {
     }
 
     public void cropAboard(MouseEvent event) {
+        if(originImage!=null){
+            while(!frontEndManager.getTopImage().getValue().equals(originImage)){
+                frontEndManager.remove();
+            }
+            cutMainImage.setImage(originImage);
+            locateImg(cutMainImage);
+        }
 
     }
 
     // todo:
     public void cropSave(MouseEvent event) throws Exception {
-        System.out.println("Image Width:" + cutMainImage.getImage().getWidth()); // 704.25
-        System.out.println("Image Height:" + cutMainImage.getImage().getHeight()); //939
-        System.out.println("ImageView Width:" + cutMainImage.getFitWidth());
-        System.out.println("ImageView Height:" + cutMainImage.getFitHeight());
-        System.out.println("ImageView X&Y:"+cutMainImage.getX()+" "+cutMainImage.getY());
-        System.out.println("Origin Rectangle X:" + rectangleView.getX());
-        System.out.println("Origin Rectangle Y" + rectangleView.getY());
-        double relateX = rectangleView.getX() - cutMainImage.getLayoutX()-cutMainImage.getX();
-        double relateY = rectangleView.getY() + imagePane.getLayoutY()-cutMainImage.getLayoutY();
-        System.out.println("Related X: " + relateX);
-        System.out.println("Related Y: " + relateY);
-        System.out.println("Rectangle W:" + rectangleView.getWidth());
-        System.out.println("Rectangle H:" + rectangleView.getHeight());
-        ImageManager manager = ImageManager.getInstance();
-        double ratio = cutMainImage.getFitHeight() / cutMainImage.getImage().getHeight();
-        int actualX = (int)(relateX/ratio);
-        int actualY = (int)(relateY/ratio);
-        int actualW = (int)(rectangleView.getWidth()/ratio);
-        int actualH = (int)(rectangleView.getHeight()/ratio);
-        Pair<String, Image> topImage = frontEndManager.getTopImage();
-        String newImagePath = manager.cutImage(
-                topImage.getKey(),
-                actualX, actualY, actualW, actualH);
-        Image newImage = new Image(new FileInputStream(newImagePath));
-        frontEndManager.add(newImagePath, newImage);
-        cutMainImage.setImage(newImage);
-        locateImg(cutMainImage);
-        initial();
+
 
     }
 
@@ -126,12 +108,11 @@ public class ImageCutController implements Initializable, ImageCommand {
     class CropHandler {
         double mousePressX;
         double mousePressY;
-        double mouseReleaseX;
-        double mouseReleaseY;
         boolean pressed = false;
 
         public EventHandler<MouseEvent> onPress() {
             return e -> {
+                shadeImage();
                 mousePressX = e.getX()<cutMainImage.getLayoutX()+cutMainImage.getX()?
                         cutMainImage.getLayoutX()+cutMainImage.getX():e.getX();
                 mousePressY = e.getY()-imagePane.getLayoutY()<cutMainImage.getLayoutY()-imagePane.getLayoutY()?
@@ -159,6 +140,44 @@ public class ImageCutController implements Initializable, ImageCommand {
                 drawShape();
             };
         }
+        public EventHandler<MouseEvent> onRelease() {
+            return e -> {
+                System.out.println("Image Width:" + cutMainImage.getImage().getWidth()); // 704.25
+                System.out.println("Image Height:" + cutMainImage.getImage().getHeight()); //939
+                System.out.println("ImageView Width:" + cutMainImage.getFitWidth());
+                System.out.println("ImageView Height:" + cutMainImage.getFitHeight());
+                System.out.println("ImageView X&Y:"+cutMainImage.getX()+" "+cutMainImage.getY());
+                System.out.println("Origin Rectangle X:" + rectangleView.getX());
+                System.out.println("Origin Rectangle Y" + rectangleView.getY());
+                double relateX = rectangleView.getX() - cutMainImage.getLayoutX()-cutMainImage.getX();
+                double relateY = rectangleView.getY() + imagePane.getLayoutY()-cutMainImage.getLayoutY();
+                System.out.println("Related X: " + relateX);
+                System.out.println("Related Y: " + relateY);
+                System.out.println("Rectangle W:" + rectangleView.getWidth());
+                System.out.println("Rectangle H:" + rectangleView.getHeight());
+                ImageManager manager = ImageManager.getInstance();
+                double ratio = cutMainImage.getFitHeight() / cutMainImage.getImage().getHeight();
+                int actualX = (int)(relateX/ratio);
+                int actualY = (int)(relateY/ratio);
+                int actualW = (int)(rectangleView.getWidth()/ratio);
+                int actualH = (int)(rectangleView.getHeight()/ratio);
+                Pair<String, Image> topImage = frontEndManager.getTopImage();
+                String newImagePath = manager.cutImage(
+                        topImage.getKey(),
+                        actualX, actualY, actualW, actualH);
+                Image newImage = null;
+                try {
+                    newImage = new Image(new FileInputStream(newImagePath));
+                } catch (FileNotFoundException ex) {
+                    ex.printStackTrace();
+                }
+                frontEndManager.add(newImagePath, newImage);
+                cutMainImage.setImage(newImage);
+                locateImg(cutMainImage);
+                initial();
+            };
+        }
+
         private double getCurrentX(MouseEvent e) {
             double currentX = e.getX();
             // X is beyond the left of the image
@@ -194,37 +213,27 @@ public class ImageCutController implements Initializable, ImageCommand {
             rectangleView.setWidth(width);
             if(currentX<mousePressX&&currentY<mousePressY){
                 // the current mouse pos is on the left top of mouse press
-                System.out.println("-----left top: "+currentX+" "+currentY+"---------");
+//                System.out.println("-----left top: "+currentX+" "+currentY+"---------");
                 rectangleView.setX(currentX);
                 rectangleView.setY(currentY);
             }else if(currentX<mousePressX){
                 // current mouse pos is on the left bottom of mouse press
-                System.out.println("-----left bottom: "+currentX+" "+mousePressY+"---------");
+//                System.out.println("-----left bottom: "+currentX+" "+mousePressY+"---------");
                 rectangleView.setX(currentX);
                 rectangleView.setY(mousePressY);
                 //current mouse pos is on the right top of the mouse press
             }else if(currentY<mousePressY){
-                System.out.println("-----left bottom: "+mousePressX+" "+currentY+"---------");
+//                System.out.println("-----left bottom: "+mousePressX+" "+currentY+"---------");
                 rectangleView.setX(mousePressX);
                 rectangleView.setY(currentY);
             }else{
                 // current mouse pos is on the right bottom of the mouse press
-                System.out.println("-----left bottom: "+mousePressX+" "+mousePressY+"---------");
+//                System.out.println("-----left bottom: "+mousePressX+" "+mousePressY+"---------");
                 rectangleView.setX(mousePressX);
                 rectangleView.setY(mousePressY);
             }
-            System.out.println("Rectangle X:"+rectangleView.getX()+"Rectangle Y"+rectangleView.getY());
-            System.out.println("Rectangle width: "+rectangleView.getWidth()+" height: "+rectangleView.getHeight());
-        }
-
-        public EventHandler<MouseEvent> onRelease() {
-            return e -> {
-                mouseReleaseX = e.getX();
-                mouseReleaseY = e.getY();
-                pressed = false;
-                System.out.println("mouseReleaseX:" + mouseReleaseX + " mouseReleaseY:" + mouseReleaseY);
-
-            };
+//            System.out.println("Rectangle X:"+rectangleView.getX()+"Rectangle Y"+rectangleView.getY());
+//            System.out.println("Rectangle width: "+rectangleView.getWidth()+" height: "+rectangleView.getHeight());
         }
     }
 
@@ -236,10 +245,3 @@ public class ImageCutController implements Initializable, ImageCommand {
         imagePane.getChildren().add(shadowShape);
     }
 }
-//                System.out.println("imagePaneW:" + imagePane.getWidth()); 2048
-//                System.out.println("imagePaneH:" + imagePane.getHeight()); 1878
-//                System.out.println("ImageViewLayeroutX:" + cutMainImage.getLayoutX()); 512
-//                System.out.println("ImageViewLayeroutY:" + cutMainImage.getLayoutY()); 14
-//                System.out.println("imagePane:"+imagePane.getLayoutY()); // 42
-//                System.out.println("ImageView X:"+cutMainImage.getX()); //159.875
-//                System.out.println("ImageView Y:"+cutMainImage.getY());

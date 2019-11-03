@@ -133,16 +133,6 @@ public class PrimaryController implements Initializable, ImageCommand {
     @FXML
     public void ImageRotateOp(MouseEvent event) throws FileNotFoundException {
         if (event.isPrimaryButtonDown()) {
-//            if(tmpImagePath==null)
-//                tmpImagePath = imageManager.rotate(originImagePath, 90);
-//            else{
-//                tmpImagePath = imageManager.rotate(tmpImagePath, 90);
-//            }
-//            if(tmpImagePath==null) throw new FileNotFoundException();
-//            System.out.println(tmpImagePath);
-//            mainImage.setImage(new Image(new FileInputStream(new File(tmpImagePath))));
-//            locateImg(this.mainImage);
-//            this.isSave = false;
             Pair<String, Image> topImage = frontEndManager.getTopImage();
             if(topImage.getKey()==null)
                 throw new FileNotFoundException();
@@ -165,14 +155,7 @@ public class PrimaryController implements Initializable, ImageCommand {
 
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
-//        stage.setOnShowing(event -> {
-//            ImageCutController controller = fxmlLoader.getController();
-//            controller.setImage(this.mainImage.getImage());
-//            locateImg(controller.cutMainImage);
-//            controller.shadeImage();
-//        });
         stage.show();
-//        App.stage.showAndWait();
         StageManager.STAGE.put("ImageCutStage",stage);
         StageManager.CONTROLLER.put("PrimaryController",this);
         stage.setOnCloseRequest(e->{
