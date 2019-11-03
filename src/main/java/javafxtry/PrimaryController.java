@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Pair;
 import javafxtry.imgbackends.operations.ImageManager;
@@ -35,10 +36,6 @@ import static javafxtry.imgfrontends.FrontEndImageManager.locateImg;
 public class PrimaryController implements Initializable, ImageCommand {
     public ImageView mainImage;
     public Pane imagePane;
-    //    public ScrollPane scrollPane = new ScrollPane();
-//    public StackPane stackPane;
-//    private String originImagePath = null;
-//    private String tmpImagePath = null;
     private boolean isSave = true;
     private String recentDir = null;
     private ImageManager imageManager = ImageManager.getInstance();
@@ -58,21 +55,13 @@ public class PrimaryController implements Initializable, ImageCommand {
         );
         File originFile = fileChooser.showOpenDialog(App.stage);
         recentDir = originFile.getParent();
-//        this.originImagePath = originFile.getPath();
-//        tmpImagePath = null;
-//        System.out.println(originImagePath);
         String path = originFile.getPath();
         //show selected Image
         Image img = new Image(new FileInputStream(originFile));
         frontEndManager.add(path, img);
         mainImage.setImage(img);
         locateImg(this.mainImage);
-//        System.out.println("width: "+img.getWidth());
-//        System.out.println("height: "+img.getHeight());
-//        System.out.println("view width: "+mainImage.getFitWidth());
-//        System.out.println("view height: "+mainImage.getFitHeight());
-//        System.out.println("view X: "+mainImage.getX());
-//        System.out.println("view Y: "+mainImage.getY());
+
     }
 
 
@@ -155,6 +144,8 @@ public class PrimaryController implements Initializable, ImageCommand {
 
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
+        stage.initOwner(App.stage);
+        stage.initModality(Modality.WINDOW_MODAL);
         stage.show();
         StageManager.STAGE.put("ImageCutStage",stage);
         StageManager.CONTROLLER.put("PrimaryController",this);
