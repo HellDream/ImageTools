@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -89,6 +90,14 @@ public class PrimaryController implements Initializable, ImageCommand {
             Optional<ButtonType> result = alert.showAndWait();
             if(result.get() == ButtonType.YES||result.get()==ButtonType.OK){
                 saveImage();
+            }else{
+                File dir = new File(Constants.CACHES);
+                File[] files = dir.listFiles();
+                if(files!=null){
+                    for(File f:files){
+                        f.delete();
+                    }
+                }
             }
         }
         File dir = new File(Constants.CACHES);
@@ -158,7 +167,13 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     }
 
+    @FXML
+    private TextField textField;
     public void ImageTextOp(MouseEvent event) {
+        initializeText();
+    }
+
+    private void initializeText() {
 
     }
 
@@ -178,7 +193,7 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     }
 
-    public void setSave(boolean b) {
-        this.isSave = b;
+    public void setSave(boolean save) {
+        this.isSave = save;
     }
 }

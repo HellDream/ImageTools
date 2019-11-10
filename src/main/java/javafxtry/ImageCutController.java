@@ -66,7 +66,7 @@ public class ImageCutController implements Initializable, ImageCommand {
     public void shadeImage() {
         shadeRectangle.setHeight(cutMainImage.getFitHeight());
         shadeRectangle.setWidth(cutMainImage.getFitWidth());
-        System.out.println("shade rectangle width:"+shadeRectangle.getWidth());
+        System.out.println("shade rectangle width:" + shadeRectangle.getWidth());
         shadeRectangle.setX(cutMainImage.getX());
         shadeRectangle.setY(cutMainImage.getY());
         shadeRectangle.setLayoutX(cutMainImage.getLayoutX());
@@ -80,8 +80,8 @@ public class ImageCutController implements Initializable, ImageCommand {
     }
 
     public void cropAboard(MouseEvent event) {
-        if(originImage!=null){
-            while(!frontEndManager.getTopImage().getValue().equals(originImage)){
+        if (originImage != null) {
+            while (!frontEndManager.getTopImage().getValue().equals(originImage)) {
                 frontEndManager.remove();
             }
             cutMainImage.setImage(originImage);
@@ -90,11 +90,10 @@ public class ImageCutController implements Initializable, ImageCommand {
 
     }
 
-    // todo:
-    public void cropSave(MouseEvent event) throws Exception {
+    public void cropSave(MouseEvent event) {
         Pair<String, Image> topImage = frontEndManager.getTopImage();
-        PrimaryController controller = (PrimaryController)StageManager.CONTROLLER.get("PrimaryController");
-        if(!topImage.getValue().equals(originImage)){
+        PrimaryController controller = (PrimaryController) StageManager.CONTROLLER.get("PrimaryController");
+        if (!topImage.getValue().equals(originImage)) {
             controller.mainImage.setImage(topImage.getValue());
             controller.setSave(false);
         }
@@ -116,31 +115,31 @@ public class ImageCutController implements Initializable, ImageCommand {
     class CropHandler {
         double mousePressX;
         double mousePressY;
+        double mouseReleaseX;
+        double mouseReleaseY;
         boolean pressed = false;
 
         public EventHandler<MouseEvent> onPress() {
             return e -> {
                 shadeImage();
-                mousePressX = e.getX()<cutMainImage.getLayoutX()+cutMainImage.getX()?
-                        cutMainImage.getLayoutX()+cutMainImage.getX():e.getX();
-                mousePressY = e.getY()-imagePane.getLayoutY()<cutMainImage.getLayoutY()-imagePane.getLayoutY()?
-                        cutMainImage.getLayoutY()-imagePane.getLayoutY():e.getY()-imagePane.getLayoutY();
+                mousePressX = e.getX() < cutMainImage.getLayoutX() + cutMainImage.getX() ?
+                        cutMainImage.getLayoutX() + cutMainImage.getX() : e.getX();
+                mousePressY = e.getY() - imagePane.getLayoutY() < cutMainImage.getLayoutY() - imagePane.getLayoutY() ?
+                        cutMainImage.getLayoutY() - imagePane.getLayoutY() : e.getY() - imagePane.getLayoutY();
                 pressed = true;
-                System.out.println("mousePressX:" + mousePressX + " mousePressY:" + mousePressY);
-
             };
         }
 
         public EventHandler<MouseEvent> onDrag() {
-            return e ->{
+            return e -> {
                 double currentX = getCurrentX(e);
                 double currentY = getCurrentY(e);
-                double width = Math.abs(currentX-mousePressX);
-                if(width>cutMainImage.getFitWidth())
+                double width = Math.abs(currentX - mousePressX);
+                if (width > cutMainImage.getFitWidth())
                     width = cutMainImage.getFitWidth();
                 // Y begins in -14
-                double height = Math.abs(currentY-mousePressY+cutMainImage.getLayoutY());
-                if(height>cutMainImage.getFitHeight()){
+                double height = Math.abs(currentY - mousePressY + cutMainImage.getLayoutY());
+                if (height > cutMainImage.getFitHeight()) {
                     height = cutMainImage.getFitHeight();
                 }
                 setRectangleView(currentX, currentY, width, height);
@@ -148,27 +147,26 @@ public class ImageCutController implements Initializable, ImageCommand {
                 drawShape();
             };
         }
+
         public EventHandler<MouseEvent> onRelease() {
             return e -> {
-                System.out.println("Image Width:" + cutMainImage.getImage().getWidth()); // 704.25
-                System.out.println("Image Height:" + cutMainImage.getImage().getHeight()); //939
-                System.out.println("ImageView Width:" + cutMainImage.getFitWidth());
-                System.out.println("ImageView Height:" + cutMainImage.getFitHeight());
-                System.out.println("ImageView X&Y:"+cutMainImage.getX()+" "+cutMainImage.getY());
-                System.out.println("Origin Rectangle X:" + rectangleView.getX());
-                System.out.println("Origin Rectangle Y" + rectangleView.getY());
-                double relateX = rectangleView.getX() - cutMainImage.getLayoutX()-cutMainImage.getX();
-                double relateY = rectangleView.getY() + imagePane.getLayoutY()-cutMainImage.getLayoutY();
-                System.out.println("Related X: " + relateX);
-                System.out.println("Related Y: " + relateY);
-                System.out.println("Rectangle W:" + rectangleView.getWidth());
-                System.out.println("Rectangle H:" + rectangleView.getHeight());
+                mouseReleaseX = e.getX() < cutMainImage.getLayoutX() + cutMainImage.getX() ?
+                        cutMainImage.getLayoutX() + cutMainImage.getX() : e.getX();
+                mouseReleaseY = e.getY() - imagePane.getLayoutY() < cutMainImage.getLayoutY() - imagePane.getLayoutY() ?
+                        cutMainImage.getLayoutY() - imagePane.getLayoutY() : e.getY() - imagePane.getLayoutY();
+
+                if (mousePressX == mouseReleaseX || mousePressX == mouseReleaseY) {
+                    initial();
+                    return;
+                }
+                double relateX = rectangleView.getX() - cutMainImage.getLayoutX() - cutMainImage.getX();
+                double relateY = rectangleView.getY() + imagePane.getLayoutY() - cutMainImage.getLayoutY();
                 ImageManager manager = ImageManager.getInstance();
                 double ratio = cutMainImage.getFitHeight() / cutMainImage.getImage().getHeight();
-                int actualX = (int)(relateX/ratio);
-                int actualY = (int)(relateY/ratio);
-                int actualW = (int)(rectangleView.getWidth()/ratio);
-                int actualH = (int)(rectangleView.getHeight()/ratio);
+                int actualX = (int) (relateX / ratio);
+                int actualY = (int) (relateY / ratio);
+                int actualW = (int) (rectangleView.getWidth() / ratio);
+                int actualH = (int) (rectangleView.getHeight() / ratio);
                 Pair<String, Image> topImage = frontEndManager.getTopImage();
                 String newImagePath = manager.cutImage(
                         topImage.getKey(),
@@ -189,59 +187,52 @@ public class ImageCutController implements Initializable, ImageCommand {
         private double getCurrentX(MouseEvent e) {
             double currentX = e.getX();
             // X is beyond the left of the image
-            if(currentX<cutMainImage.getLayoutX()+cutMainImage.getX()){
-                currentX = cutMainImage.getLayoutX()+cutMainImage.getX();
+            if (currentX < cutMainImage.getLayoutX() + cutMainImage.getX()) {
+                currentX = cutMainImage.getLayoutX() + cutMainImage.getX();
                 // X is beyond the right of the image
-            }else if(currentX>cutMainImage.getLayoutX()+cutMainImage.getX()+cutMainImage.getFitWidth()){
+            } else if (currentX > cutMainImage.getLayoutX() + cutMainImage.getX() + cutMainImage.getFitWidth()) {
 
-                currentX = cutMainImage.getLayoutX()+cutMainImage.getX()+cutMainImage.getFitWidth();
+                currentX = cutMainImage.getLayoutX() + cutMainImage.getX() + cutMainImage.getFitWidth();
             }
             return currentX;
         }
 
-        private double getCurrentY(MouseEvent e){
-            double currentY = e.getY()-imagePane.getLayoutY();
+        private double getCurrentY(MouseEvent e) {
+            double currentY = e.getY() - imagePane.getLayoutY();
             // Y is upper the image;
-            if(currentY<cutMainImage.getLayoutY()-imagePane.getLayoutY()){
-                currentY = cutMainImage.getLayoutY()-imagePane.getLayoutY();
+            if (currentY < cutMainImage.getLayoutY() - imagePane.getLayoutY()) {
+                currentY = cutMainImage.getLayoutY() - imagePane.getLayoutY();
                 // Y is under the image;
-            }else if(currentY >cutMainImage.getLayoutY()-imagePane.getLayoutY()+cutMainImage.getFitHeight()){
-                currentY = cutMainImage.getLayoutY()-imagePane.getLayoutY()+cutMainImage.getFitHeight();
+            } else if (currentY > cutMainImage.getLayoutY() - imagePane.getLayoutY() + cutMainImage.getFitHeight()) {
+                currentY = cutMainImage.getLayoutY() - imagePane.getLayoutY() + cutMainImage.getFitHeight();
             }
             return currentY;
         }
 
         /**
-        * @description: set rectangle view coordinate and size
-        * @param: currentX, currentY, width height
-        *
-        */
+         * @description: set rectangle view coordinate and size
+         * @param: currentX, currentY, width height
+         */
         private void setRectangleView(double currentX, double currentY, double width, double height) {
             rectangleView.setHeight(height);
             rectangleView.setWidth(width);
-            if(currentX<mousePressX&&currentY<mousePressY){
+            if (currentX < mousePressX && currentY < mousePressY) {
                 // the current mouse pos is on the left top of mouse press
-//                System.out.println("-----left top: "+currentX+" "+currentY+"---------");
                 rectangleView.setX(currentX);
                 rectangleView.setY(currentY);
-            }else if(currentX<mousePressX){
+            } else if (currentX < mousePressX) {
                 // current mouse pos is on the left bottom of mouse press
-//                System.out.println("-----left bottom: "+currentX+" "+mousePressY+"---------");
                 rectangleView.setX(currentX);
                 rectangleView.setY(mousePressY);
                 //current mouse pos is on the right top of the mouse press
-            }else if(currentY<mousePressY){
-//                System.out.println("-----left bottom: "+mousePressX+" "+currentY+"---------");
+            } else if (currentY < mousePressY) {
                 rectangleView.setX(mousePressX);
                 rectangleView.setY(currentY);
-            }else{
+            } else {
                 // current mouse pos is on the right bottom of the mouse press
-//                System.out.println("-----left bottom: "+mousePressX+" "+mousePressY+"---------");
                 rectangleView.setX(mousePressX);
                 rectangleView.setY(mousePressY);
             }
-//            System.out.println("Rectangle X:"+rectangleView.getX()+"Rectangle Y"+rectangleView.getY());
-//            System.out.println("Rectangle width: "+rectangleView.getWidth()+" height: "+rectangleView.getHeight());
         }
     }
 
