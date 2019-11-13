@@ -28,6 +28,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Map;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -250,5 +251,29 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     public void setSave(boolean save) {
         this.isSave = save;
+    }
+
+    public void showProperty(ActionEvent event) {
+        if(frontEndManager.getImageSize()==0) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText("Warning");
+            alert.setContentText("No Image Found!");
+            alert.showAndWait();
+        }else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Image Property");
+            String imagepath = frontEndManager.getTopImage().getKey();
+            try{
+                Map<String, String> imageInfo = imageManager.identifyImg(imagepath);
+                StringBuilder sb = new StringBuilder();
+                for(String key:imageInfo.keySet()){
+                    sb.append(key).append(": ").append(imageInfo.get(key)).append("\n");
+                }
+                alert.setContentText(sb.toString());
+                alert.showAndWait();
+            } catch (Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
     }
 }

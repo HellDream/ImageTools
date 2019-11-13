@@ -2,13 +2,15 @@ package javafxtry.imgbackends.operations;
 
 import javafxtry.imgbackends.utils.Constants;
 import javafxtry.imgbackends.utils.DateTimeUtils;
-import org.im4java.core.ConvertCmd;
-import org.im4java.core.IMOperation;
-import org.im4java.core.Info;
+import org.im4java.core.*;
+import org.im4java.process.ArrayListOutputConsumer;
 import sun.awt.OSInfo;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ImageManager {
     public static ImageManager manager = null;
@@ -112,11 +114,34 @@ public class ImageManager {
         convertCmd.run(operation);
     }
 
-    public static void main(String[] args) {
+    public Map<String, String> identifyImg(String filepath) throws Exception {
+        Map<String, String> imageInfo = new HashMap<>();
+        IMOperation operation = new IMOperation();
+//        operation.identify();
+        operation.format("%w,%h,%d/%f,%Q,%b,%e");
+        operation.addImage(filepath);
+        IdentifyCmd identifyCmd = new IdentifyCmd();
+        ArrayListOutputConsumer output = new ArrayListOutputConsumer();
+        identifyCmd.setOutputConsumer(output);
+        identifyCmd.run(operation);
+        List<String> cmdOutput = output.getOutput();
+        String[] result = cmdOutput.get(0).split(",");
+        if (result.length == 6) {
+            imageInfo.put("Width", result[0]);
+            imageInfo.put("Height", result[1]);
+            imageInfo.put("Path", result[2]);
+            imageInfo.put("Quality", result[3]);
+            imageInfo.put("Size", result[4]);
+            imageInfo.put("Type", result[5]);
+        }
+        return imageInfo;
+
+    }
+
+    public static void main(String[] args) throws Exception {
         Constants.initialize("D:\\ImageMagick-7.0.8-Q16");
-        String filePath = "C:\\Users\\YU YE\\Pictures\\1.jpg";
+        String filePath = "C:\\Users\\YU YE\\Pictures\\IMG_6077.JPG";
         ImageManager manager = ImageManager.getInstance();
-        String s = manager.cutImage(filePath, (int)(631.125/0.75),(int)(214/0.75),(int)(314/0.75),(int)(437/0.75));
-        System.out.println(s);
+        manager.identifyImg(filePath);
     }
 }

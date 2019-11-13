@@ -20,11 +20,8 @@
                                 <MenuItem id="OpenMenuItem" mnemonicParsing="false" onAction="#openFile" text="Open" />
                                 <MenuItem id="SaveMenuItem" mnemonicParsing="false" onAction="#saveImage" text="Save" />
                                 <MenuItem id="CloseMenuItem" mnemonicParsing="false" onAction="#closeImage" text="Close" />
-                                <Menu mnemonicParsing="false" text="Help">
-                                    <items>
-                                        <MenuItem id="AboutMenuItem" mnemonicParsing="false" onAction="#about" text="About" />
-                                    </items>
-                                </Menu>
+                                <MenuItem id="PropertyMenuItem" mnemonicParsing="false" onAction="#showProperty" text="Property" />
+                                <MenuItem id="AboutMenuItem" mnemonicParsing="false" onAction="#about" text="About" />
                             </items>
                         </Menu>
                     </menus>
