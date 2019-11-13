@@ -148,6 +148,33 @@ public class PrimaryController implements Initializable, ImageCommand {
         }
     }
 
+    public void viewThumbnail(MouseEvent event) {
+        if(frontEndManager.getImageSize()==0)
+            return;
+        try{
+            openThumbnailStage();
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+    }
+
+    private void openThumbnailStage() throws IOException {
+        Stage stage = new Stage();
+        stage.setTitle("Thumbnail");
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("thumbnailView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.initOwner(App.stage);
+        StageManager.STAGE.put("ThumbnailStage", stage);
+        StageManager.CONTROLLER.put("PrimaryController", this);
+        stage.show();
+        stage.setOnCloseRequest(e->{
+            StageManager.STAGE.remove("ImageCutStage");
+            StageManager.CONTROLLER.remove("PrimaryController");
+        });
+    }
+
     private void openImageCutStage() throws IOException {
         if(frontEndManager.getImageSize()==0)
             return;
@@ -167,6 +194,7 @@ public class PrimaryController implements Initializable, ImageCommand {
             mainImage.setImage(topImage.getValue());
             locateImg(mainImage);
             StageManager.STAGE.remove("ImageCutStage");
+            StageManager.CONTROLLER.remove("PrimaryController");
         });
 
     }

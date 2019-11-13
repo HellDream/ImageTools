@@ -30,14 +30,14 @@
                     </menus>
                 </MenuBar>
                 <Pane prefHeight="42.0" prefWidth="913.0" />
-                <Pane prefHeight="42.0" prefWidth="156.0">
+                <Pane prefHeight="42.0" prefWidth="180.0">
                     <children>
                         <ImageView id="CutOp" fitHeight="26.0" fitWidth="26.0" layoutX="40.0" layoutY="6.0" onMousePressed="#ImageCutOp" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@img/cut.png" />
                             </image>
                         </ImageView>
-                        <ImageView id="RotateOp" fitHeight="26.0" fitWidth="26.0" layoutX="78.0" layoutY="6.0" onMousePressed="#ImageRotateOp" pickOnBounds="true" preserveRatio="true">
+                        <ImageView id="RotateOp" fitHeight="26.0" fitWidth="26.0" layoutX="76.0" layoutY="6.0" onMousePressed="#ImageRotateOp" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@img/rotate.png" />
                             </image>
@@ -47,11 +47,16 @@
                                 <Image url="@img/text.png" />
                             </image>
                         </ImageView>
-                          <ImageView id="exportOp" fitHeight="26.0" fitWidth="26.0" layoutX="116.0" layoutY="6.0" onMouseClicked="#exportImage" pickOnBounds="true" preserveRatio="true">
+                          <ImageView id="exportOp" fitHeight="26.0" fitWidth="26.0" layoutX="111.0" layoutY="6.0" onMouseClicked="#exportImage" pickOnBounds="true" preserveRatio="true">
                              <image>
                                 <Image url="@img/export.png" />
                              </image>
                           </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="148.0" layoutY="6.0" onMouseClicked="#viewThumbnail" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/thumbnail.png" />
+                     </image>
+                  </ImageView>
                     </children>
                 </Pane>
             </children>

@@ -101,4 +101,17 @@ public class FrontEndImageManager {
     public String getBaseFormat() {
         return baseFormat;
     }
+
+    public void locateThumbnail(ImageView thumbnailView){
+        Image img = thumbnailView.getImage();
+        if(img==null) return;
+        double ratioX = thumbnailView.getFitWidth()/ img.getWidth();
+        double ratioY = thumbnailView.getFitHeight() / img.getHeight();
+        double reducCoeff = ratioX>=ratioY?ratioY:ratioX;
+        double w = img.getWidth() * reducCoeff;
+        double h = img.getHeight() * reducCoeff;
+        thumbnailView.setX((thumbnailView.getFitWidth() - w) / 2);
+        thumbnailView.setY((thumbnailView.getFitHeight() - h) / 2);
+
+    }
 }
