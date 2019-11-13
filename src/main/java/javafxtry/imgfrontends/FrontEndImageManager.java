@@ -17,7 +17,8 @@ public class FrontEndImageManager {
     private Stack<Image> imageStackCache;
     private int imageSize = 0;
     private static FrontEndImageManager manager = null;
-
+    private String baseImageName = "Default";
+    private String baseFormat = ".jpg";
     private FrontEndImageManager(){
         imagePaths = new Stack<>();
         imageStack = new Stack<>();
@@ -85,8 +86,19 @@ public class FrontEndImageManager {
         return new Pair<>(imagePaths.peek(), imageStack.peek());
     }
 
+    public void setBaseImageName(String imageName){
+        this.baseImageName = imageName;
+    }
 
+    public void setBaseFormat(String format){
+        this.baseFormat = format;
+    }
 
+    public String getBaseImageName() {
+        return baseImageName;
+    }
 
-
+    public String getBaseFormat() {
+        return baseFormat;
+    }
 }

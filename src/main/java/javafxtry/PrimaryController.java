@@ -53,10 +53,14 @@ public class PrimaryController implements Initializable, ImageCommand {
                 new FileChooser.ExtensionFilter("GIF", "*.gif"),
                 new FileChooser.ExtensionFilter("BMP", "*.bmp"),
                 new FileChooser.ExtensionFilter("PNG", "*.png")
-        );
+                );
         File originFile = fileChooser.showOpenDialog(App.stage);
         recentDir = originFile.getParent();
         String path = originFile.getPath();
+        String fileName = originFile.getName();
+        frontEndManager.setBaseImageName(fileName.substring(0,fileName.lastIndexOf('.')));
+        frontEndManager.setBaseFormat(fileName.substring(fileName.lastIndexOf('.')+1));
+        System.out.println(fileName);
         //show selected Image
         Image img = new Image(new FileInputStream(originFile));
         frontEndManager.add(path, img);
@@ -70,11 +74,11 @@ public class PrimaryController implements Initializable, ImageCommand {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save Image");
         fileChooser.setInitialDirectory(new File(recentDir==null?System.getProperty("user.home"):recentDir));
-        fileChooser.setInitialFileName("image.jpg");
+        fileChooser.setInitialFileName(frontEndManager.getBaseImageName()+"."+frontEndManager.getBaseFormat());
         File file = fileChooser.showSaveDialog(App.stage);
         if(file!=null){
             try{
-                ImageIO.write(SwingFXUtils.fromFXImage(mainImage.getImage(),null),"jpg",file);
+                ImageIO.write(SwingFXUtils.fromFXImage(mainImage.getImage(),null),frontEndManager.getBaseFormat(),file);
             }catch (Exception e){
                 System.out.println(e.getMessage());
             }
@@ -167,8 +171,31 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     }
 
+    public void exportImage(MouseEvent event) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Export Image");
+        fileChooser.setInitialDirectory(new File(recentDir==null?System.getProperty("user.home"):recentDir));
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JPG", "*.jpg"),
+                new FileChooser.ExtensionFilter("GIF", "*.gif"),
+                new FileChooser.ExtensionFilter("BMP", "*.bmp"),
+                new FileChooser.ExtensionFilter("PNG", "*.png")
+                );
+        File file = fileChooser.showSaveDialog(App.stage);
+        if(file!=null){
+            try{
+                String imagePath = frontEndManager.getTopImage().getKey();
+                String path = file.getPath();
+                imageManager.convertImage(imagePath, path);
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
+
+    }
+
     @FXML
     private TextField textField;
+
     public void ImageTextOp(MouseEvent event) {
         initializeText();
     }

@@ -105,6 +105,13 @@ public class ImageManager {
         return tmpFilepath;
     }
 
+    public void convertImage(String filepath, String outputpath) throws Exception {
+        IMOperation operation = new IMOperation();
+        operation.addImage(filepath);
+        operation.addImage(outputpath);
+        convertCmd.run(operation);
+    }
+
     public static void main(String[] args) {
         Constants.initialize("D:\\ImageMagick-7.0.8-Q16");
         String filePath = "C:\\Users\\YU YE\\Pictures\\1.jpg";
