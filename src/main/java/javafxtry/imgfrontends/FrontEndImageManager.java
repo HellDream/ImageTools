@@ -76,10 +76,22 @@ public class FrontEndImageManager {
         imageSize--;
     }
 
+    public void removeTo(Image image){
+        while(imageStack.size()>1&&!imageStack.peek().equals(image)){
+            imageStack.pop();
+            imagePaths.pop();
+            imageSize--;
+        }
+    }
+
     public void reAdd(){
         imagePaths.push(imagePathCache.pop());
         imageStack.push(imageStackCache.pop());
         imageSize++;
+    }
+
+    public int getCacheSize(){
+        return imageStackCache.size();
     }
 
     public Pair<String, Image> getTopImage(){

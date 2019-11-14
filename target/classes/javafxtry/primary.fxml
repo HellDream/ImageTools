@@ -20,16 +20,23 @@
                                 <MenuItem id="OpenMenuItem" mnemonicParsing="false" onAction="#openFile" text="Open" />
                                 <MenuItem id="SaveMenuItem" mnemonicParsing="false" onAction="#saveImage" text="Save" />
                                 <MenuItem id="CloseMenuItem" mnemonicParsing="false" onAction="#closeImage" text="Close" />
-                                <Menu mnemonicParsing="false" text="Help">
-                                    <items>
-                                        <MenuItem id="AboutMenuItem" mnemonicParsing="false" onAction="#about" text="About" />
-                                    </items>
-                                </Menu>
+                                <MenuItem id="PropertyMenuItem" mnemonicParsing="false" onAction="#showProperty" text="Property" />
+                                <MenuItem id="AboutMenuItem" mnemonicParsing="false" onAction="#about" text="About" />
                             </items>
                         </Menu>
                     </menus>
                 </MenuBar>
-                <Pane prefHeight="42.0" prefWidth="913.0" />
+                <Pane prefHeight="42.0" prefWidth="913.0">
+               <children>
+                  <ImageView id="undoImage" fitHeight="26.0" fitWidth="26.0" layoutX="14.0" layoutY="6.0" onMousePressed="#undoOp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/back.png" />
+                     </image></ImageView>
+                  <ImageView id="redoImage" fitHeight="26.0" fitWidth="26.0" layoutX="41.0" layoutY="6.0" onMousePressed="#redoOp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/forward.png" />
+                     </image></ImageView>
+               </children></Pane>
                 <Pane prefHeight="42.0" prefWidth="180.0">
                     <children>
                         <ImageView id="CutOp" fitHeight="26.0" fitWidth="26.0" layoutX="40.0" layoutY="6.0" onMousePressed="#ImageCutOp" pickOnBounds="true" preserveRatio="true">

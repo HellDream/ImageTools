@@ -94,6 +94,8 @@ public class ImageCutController implements Initializable, ImageCommand {
         Pair<String, Image> topImage = frontEndManager.getTopImage();
         PrimaryController controller = (PrimaryController) StageManager.CONTROLLER.get("PrimaryController");
         if (!topImage.getValue().equals(originImage)) {
+            frontEndManager.removeTo(originImage);
+            frontEndManager.add(topImage.getKey(), topImage.getValue());
             controller.mainImage.setImage(topImage.getValue());
             controller.setSave(false);
         }

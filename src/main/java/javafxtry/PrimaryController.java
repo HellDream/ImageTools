@@ -191,9 +191,9 @@ public class PrimaryController implements Initializable, ImageCommand {
         StageManager.STAGE.put("ImageCutStage",stage);
         StageManager.CONTROLLER.put("PrimaryController",this);
         stage.setOnCloseRequest(e->{
-            Pair<String, Image> topImage = frontEndManager.getTopImage();
-            mainImage.setImage(topImage.getValue());
-            locateImg(mainImage);
+//            Pair<String, Image> topImage = frontEndManager.getTopImage();
+            frontEndManager.removeTo(mainImage.getImage());
+
             StageManager.STAGE.remove("ImageCutStage");
             StageManager.CONTROLLER.remove("PrimaryController");
         });
@@ -222,6 +222,30 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     }
 
+    public void redoOp(MouseEvent event) {
+        if(frontEndManager.getCacheSize()==0) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("NOTICE");
+            alert.setContentText("No more redo operation could be done");
+            alert.showAndWait();
+            return;
+        }
+        redo();
+        locateImg(mainImage);
+    }
+
+    public void undoOp(MouseEvent event) {
+        if(frontEndManager.getImageSize()==1) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("NOTICE");
+            alert.setContentText("No more undo operation could be done");
+            alert.showAndWait();
+            return;
+        }
+        undo();
+        locateImg(mainImage);
+    }
+
     @FXML
     private TextField textField;
 
@@ -241,12 +265,14 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     @Override
     public void redo() {
-
+        frontEndManager.reAdd();
+        mainImage.setImage(frontEndManager.getTopImage().getValue());
     }
 
     @Override
     public void undo() {
-
+        frontEndManager.remove();
+        mainImage.setImage(frontEndManager.getTopImage().getValue());
     }
 
     public void setSave(boolean save) {
