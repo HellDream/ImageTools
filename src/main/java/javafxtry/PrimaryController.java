@@ -42,6 +42,7 @@ public class PrimaryController implements Initializable, ImageCommand {
     private String recentDir = null;
     private ImageManager imageManager = ImageManager.getInstance();
     private FrontEndImageManager frontEndManager = FrontEndImageManager.getInstance();
+
     @FXML
     private void openFile() throws IOException {
         FileChooser fileChooser = new FileChooser();
@@ -54,13 +55,13 @@ public class PrimaryController implements Initializable, ImageCommand {
                 new FileChooser.ExtensionFilter("GIF", "*.gif"),
                 new FileChooser.ExtensionFilter("BMP", "*.bmp"),
                 new FileChooser.ExtensionFilter("PNG", "*.png")
-                );
+        );
         File originFile = fileChooser.showOpenDialog(App.stage);
         recentDir = originFile.getParent();
         String path = originFile.getPath();
         String fileName = originFile.getName();
-        frontEndManager.setBaseImageName(fileName.substring(0,fileName.lastIndexOf('.')));
-        frontEndManager.setBaseFormat(fileName.substring(fileName.lastIndexOf('.')+1));
+        frontEndManager.setBaseImageName(fileName.substring(0, fileName.lastIndexOf('.')));
+        frontEndManager.setBaseFormat(fileName.substring(fileName.lastIndexOf('.') + 1));
         System.out.println(fileName);
         //show selected Image
         Image img = new Image(new FileInputStream(originFile));
@@ -74,13 +75,13 @@ public class PrimaryController implements Initializable, ImageCommand {
     public void saveImage() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save Image");
-        fileChooser.setInitialDirectory(new File(recentDir==null?System.getProperty("user.home"):recentDir));
-        fileChooser.setInitialFileName(frontEndManager.getBaseImageName()+"."+frontEndManager.getBaseFormat());
+        fileChooser.setInitialDirectory(new File(recentDir == null ? System.getProperty("user.home") : recentDir));
+        fileChooser.setInitialFileName(frontEndManager.getBaseImageName() + "." + frontEndManager.getBaseFormat());
         File file = fileChooser.showSaveDialog(App.stage);
-        if(file!=null){
-            try{
-                ImageIO.write(SwingFXUtils.fromFXImage(mainImage.getImage(),null),frontEndManager.getBaseFormat(),file);
-            }catch (Exception e){
+        if (file != null) {
+            try {
+                ImageIO.write(SwingFXUtils.fromFXImage(mainImage.getImage(), null), frontEndManager.getBaseFormat(), file);
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -89,17 +90,17 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     @FXML
     public void closeImage() {
-        if(!isSave){
+        if (!isSave) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setContentText("You haven't save the picture, would you like to save?");
             Optional<ButtonType> result = alert.showAndWait();
-            if(result.get() == ButtonType.YES||result.get()==ButtonType.OK){
+            if (result.get() == ButtonType.YES || result.get() == ButtonType.OK) {
                 saveImage();
-            }else{
+            } else {
                 File dir = new File(Constants.CACHES);
                 File[] files = dir.listFiles();
-                if(files!=null){
-                    for(File f:files){
+                if (files != null) {
+                    for (File f : files) {
                         f.delete();
                     }
                 }
@@ -107,8 +108,8 @@ public class PrimaryController implements Initializable, ImageCommand {
         }
         File dir = new File(Constants.CACHES);
         File[] files = dir.listFiles();
-        if(files!=null){
-            for(File f:files){
+        if (files != null) {
+            for (File f : files) {
                 f.delete();
             }
         }
@@ -125,7 +126,7 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     @FXML
     public void ImageCutOp(MouseEvent event) throws IOException {
-        if (event.getClickCount()!=0) {
+        if (event.getClickCount() != 0) {
 //            if (originImagePath != null) {
             if (frontEndManager.getImageSize() != 0) {
                 openImageCutStage();
@@ -137,7 +138,7 @@ public class PrimaryController implements Initializable, ImageCommand {
     public void ImageRotateOp(MouseEvent event) throws FileNotFoundException {
         if (event.isPrimaryButtonDown()) {
             Pair<String, Image> topImage = frontEndManager.getTopImage();
-            if(topImage.getKey()==null)
+            if (topImage.getKey() == null)
                 throw new FileNotFoundException();
             String imagePath = topImage.getKey();
             String newImagePath = imageManager.rotate(imagePath, 90);
@@ -150,11 +151,11 @@ public class PrimaryController implements Initializable, ImageCommand {
     }
 
     public void viewThumbnail(MouseEvent event) {
-        if(frontEndManager.getImageSize()==0)
+        if (frontEndManager.getImageSize() == 0)
             return;
-        try{
+        try {
             openThumbnailStage();
-        } catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
@@ -170,14 +171,14 @@ public class PrimaryController implements Initializable, ImageCommand {
         StageManager.STAGE.put("ThumbnailStage", stage);
         StageManager.CONTROLLER.put("PrimaryController", this);
         stage.show();
-        stage.setOnCloseRequest(e->{
+        stage.setOnCloseRequest(e -> {
             StageManager.STAGE.remove("ImageCutStage");
             StageManager.CONTROLLER.remove("PrimaryController");
         });
     }
 
     private void openImageCutStage() throws IOException {
-        if(frontEndManager.getImageSize()==0)
+        if (frontEndManager.getImageSize() == 0)
             return;
         Stage stage = new Stage();
         stage.setTitle("Cutting Image");
@@ -188,9 +189,9 @@ public class PrimaryController implements Initializable, ImageCommand {
         stage.initOwner(App.stage);
         stage.initModality(Modality.WINDOW_MODAL);
         stage.show();
-        StageManager.STAGE.put("ImageCutStage",stage);
-        StageManager.CONTROLLER.put("PrimaryController",this);
-        stage.setOnCloseRequest(e->{
+        StageManager.STAGE.put("ImageCutStage", stage);
+        StageManager.CONTROLLER.put("PrimaryController", this);
+        stage.setOnCloseRequest(e -> {
 //            Pair<String, Image> topImage = frontEndManager.getTopImage();
             frontEndManager.removeTo(mainImage.getImage());
 
@@ -203,19 +204,19 @@ public class PrimaryController implements Initializable, ImageCommand {
     public void exportImage(MouseEvent event) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Export Image");
-        fileChooser.setInitialDirectory(new File(recentDir==null?System.getProperty("user.home"):recentDir));
+        fileChooser.setInitialDirectory(new File(recentDir == null ? System.getProperty("user.home") : recentDir));
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JPG", "*.jpg"),
                 new FileChooser.ExtensionFilter("GIF", "*.gif"),
                 new FileChooser.ExtensionFilter("BMP", "*.bmp"),
                 new FileChooser.ExtensionFilter("PNG", "*.png")
-                );
+        );
         File file = fileChooser.showSaveDialog(App.stage);
-        if(file!=null){
-            try{
+        if (file != null) {
+            try {
                 String imagePath = frontEndManager.getTopImage().getKey();
                 String path = file.getPath();
                 imageManager.convertImage(imagePath, path);
-            }catch (Exception e){
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -223,7 +224,7 @@ public class PrimaryController implements Initializable, ImageCommand {
     }
 
     public void redoOp(MouseEvent event) {
-        if(frontEndManager.getCacheSize()==0) {
+        if (frontEndManager.getCacheSize() == 0) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("NOTICE");
             alert.setContentText("No more redo operation could be done");
@@ -235,7 +236,7 @@ public class PrimaryController implements Initializable, ImageCommand {
     }
 
     public void undoOp(MouseEvent event) {
-        if(frontEndManager.getImageSize()==1) {
+        if (frontEndManager.getImageSize() == 1) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("NOTICE");
             alert.setContentText("No more undo operation could be done");
@@ -259,7 +260,7 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        IMAGE_VIEW_PARAMS.put("fitHeight",mainImage.getFitHeight());
+        IMAGE_VIEW_PARAMS.put("fitHeight", mainImage.getFitHeight());
         IMAGE_VIEW_PARAMS.put("fitWidth", mainImage.getFitWidth());
     }
 
@@ -280,24 +281,24 @@ public class PrimaryController implements Initializable, ImageCommand {
     }
 
     public void showProperty(ActionEvent event) {
-        if(frontEndManager.getImageSize()==0) {
+        if (frontEndManager.getImageSize() == 0) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setHeaderText("Warning");
             alert.setContentText("No Image Found!");
             alert.showAndWait();
-        }else{
+        } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("Image Property");
             String imagepath = frontEndManager.getTopImage().getKey();
-            try{
+            try {
                 Map<String, String> imageInfo = imageManager.identifyImg(imagepath);
                 StringBuilder sb = new StringBuilder();
-                for(String key:imageInfo.keySet()){
+                for (String key : imageInfo.keySet()) {
                     sb.append(key).append(": ").append(imageInfo.get(key)).append("\n");
                 }
                 alert.setContentText(sb.toString());
                 alert.showAndWait();
-            } catch (Exception e){
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }

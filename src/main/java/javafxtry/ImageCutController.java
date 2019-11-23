@@ -4,6 +4,7 @@ package javafxtry;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.image.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -103,14 +104,40 @@ public class ImageCutController implements Initializable, ImageCommand {
         currentStage.close();
     }
 
+    public void redoOp(MouseEvent event) {
+        if (frontEndManager.getCacheSize() == 0) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("NOTICE");
+            alert.setContentText("No more redo operation could be done");
+            alert.showAndWait();
+            return;
+        }
+        redo();
+        locateImg(cutMainImage);
+    }
+
     @Override
     public void redo() {
+        frontEndManager.reAdd();
+        cutMainImage.setImage(frontEndManager.getTopImage().getValue());
+    }
 
+    public void undoOp(MouseEvent event) {
+        if(frontEndManager.getTopImage().getValue().equals(originImage)){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("NOTICE");
+            alert.setContentText("No more undo operation could be done");
+            alert.showAndWait();
+            return;
+        }
+        undo();
+        locateImg(cutMainImage);
     }
 
     @Override
     public void undo() {
-
+        frontEndManager.remove();
+        cutMainImage.setImage(frontEndManager.getTopImage().getValue());
     }
 
 

@@ -2,11 +2,9 @@ package javafxtry;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafxtry.imgbackends.utils.Constants;
-import javafxtry.imgfrontends.FrontEndImageManager;
 import javafxtry.imgfrontends.StageManager;
 
 import java.io.IOException;
@@ -34,11 +32,6 @@ public class App extends Application {
     private void closeApp(FXMLLoader fxmlLoader) {
         PrimaryController controller = fxmlLoader.getController();
         controller.closeImage();
-    }
-
-    public static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
     }
 
     public static void main(String[] args) {
