@@ -55,19 +55,22 @@ public class ImageCutController implements Initializable, ImageCommand {
         imagePane.addEventFilter(MouseEvent.MOUSE_PRESSED, handler.onPress());
         imagePane.addEventFilter(MouseEvent.MOUSE_DRAGGED, handler.onDrag());
         imagePane.addEventFilter(MouseEvent.MOUSE_RELEASED, handler.onRelease());
-        imagePane.getChildren().add(rectangleView);
+//        imagePane.getChildren().add(rectangleView);
     }
 
     public void initial() {
         imagePane.getChildren().remove(shadowShape);
+        imagePane.getChildren().remove(rectangleView);
         shadeRectangle = new Rectangle();
         rectangleView = new Rectangle();
+//        imagePane.getChildren().add(rectangleView);
     }
 
     public void shadeImage() {
         shadeRectangle.setHeight(cutMainImage.getFitHeight());
         shadeRectangle.setWidth(cutMainImage.getFitWidth());
-        System.out.println("shade rectangle width:" + shadeRectangle.getWidth());
+        System.out.println("shade rectangle width: " + shadeRectangle.getWidth());
+        System.out.println("shade rectangle height:" + shadeRectangle.getHeight());
         shadeRectangle.setX(cutMainImage.getX());
         shadeRectangle.setY(cutMainImage.getY());
         shadeRectangle.setLayoutX(cutMainImage.getLayoutX());
@@ -153,8 +156,8 @@ public class ImageCutController implements Initializable, ImageCommand {
                 shadeImage();
                 mousePressX = e.getX() < cutMainImage.getLayoutX() + cutMainImage.getX() ?
                         cutMainImage.getLayoutX() + cutMainImage.getX() : e.getX();
-                mousePressY = e.getY() - imagePane.getLayoutY() < cutMainImage.getLayoutY() - imagePane.getLayoutY() ?
-                        cutMainImage.getLayoutY() - imagePane.getLayoutY() : e.getY() - imagePane.getLayoutY();
+                mousePressY = e.getY() < cutMainImage.getLayoutY() + cutMainImage.getY() ?
+                        cutMainImage.getLayoutY() + cutMainImage.getY():e.getY();
                 pressed = true;
             };
         }
@@ -167,7 +170,7 @@ public class ImageCutController implements Initializable, ImageCommand {
                 if (width > cutMainImage.getFitWidth())
                     width = cutMainImage.getFitWidth();
                 // Y begins in -14
-                double height = Math.abs(currentY - mousePressY + cutMainImage.getLayoutY());
+                double height = Math.abs(currentY - mousePressY);
                 if (height > cutMainImage.getFitHeight()) {
                     height = cutMainImage.getFitHeight();
                 }
@@ -181,15 +184,14 @@ public class ImageCutController implements Initializable, ImageCommand {
             return e -> {
                 mouseReleaseX = e.getX() < cutMainImage.getLayoutX() + cutMainImage.getX() ?
                         cutMainImage.getLayoutX() + cutMainImage.getX() : e.getX();
-                mouseReleaseY = e.getY() - imagePane.getLayoutY() < cutMainImage.getLayoutY() - imagePane.getLayoutY() ?
-                        cutMainImage.getLayoutY() - imagePane.getLayoutY() : e.getY() - imagePane.getLayoutY();
-
+                mouseReleaseY = e.getY() < cutMainImage.getLayoutY() + cutMainImage.getY() ?
+                        cutMainImage.getLayoutY() + cutMainImage.getY() : e.getY();
                 if (mousePressX == mouseReleaseX || mousePressX == mouseReleaseY) {
                     initial();
                     return;
                 }
                 double relateX = rectangleView.getX() - cutMainImage.getLayoutX() - cutMainImage.getX();
-                double relateY = rectangleView.getY() + imagePane.getLayoutY() - cutMainImage.getLayoutY();
+                double relateY = rectangleView.getY() - cutMainImage.getLayoutY() - cutMainImage.getY();
                 ImageManager manager = ImageManager.getInstance();
                 double ratio = cutMainImage.getFitHeight() / cutMainImage.getImage().getHeight();
                 int actualX = (int) (relateX / ratio);
@@ -227,13 +229,11 @@ public class ImageCutController implements Initializable, ImageCommand {
         }
 
         private double getCurrentY(MouseEvent e) {
-            double currentY = e.getY() - imagePane.getLayoutY();
-            // Y is upper the image;
-            if (currentY < cutMainImage.getLayoutY() - imagePane.getLayoutY()) {
-                currentY = cutMainImage.getLayoutY() - imagePane.getLayoutY();
-                // Y is under the image;
-            } else if (currentY > cutMainImage.getLayoutY() - imagePane.getLayoutY() + cutMainImage.getFitHeight()) {
-                currentY = cutMainImage.getLayoutY() - imagePane.getLayoutY() + cutMainImage.getFitHeight();
+            double currentY = e.getY();
+            if(currentY<cutMainImage.getLayoutY() + cutMainImage.getY()){
+                currentY = cutMainImage.getLayoutY()+ cutMainImage.getY();
+            }else if(currentY>cutMainImage.getY()+cutMainImage.getLayoutY()+cutMainImage.getFitHeight()){
+                currentY = cutMainImage.getY()+cutMainImage.getLayoutY()+cutMainImage.getFitHeight();
             }
             return currentY;
         }
