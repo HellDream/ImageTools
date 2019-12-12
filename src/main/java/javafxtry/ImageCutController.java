@@ -101,6 +101,7 @@ public class ImageCutController implements Initializable, ImageCommand {
             frontEndManager.removeTo(originImage);
             frontEndManager.add(topImage.getKey(), topImage.getValue());
             controller.mainImage.setImage(topImage.getValue());
+            locateImg(controller.mainImage);
             controller.setSave(false);
         }
         Stage currentStage = StageManager.STAGE.get("ImageCutStage");

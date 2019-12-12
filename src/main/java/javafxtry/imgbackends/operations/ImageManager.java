@@ -173,7 +173,6 @@ public class ImageManager {
             if(!fontMap.containsKey(family.get(i))){
 //                System.out.print(family.get(i)+"        "+fonts.get(i));
                 fontMap.put(family.get(i),fonts.get(i));
-                System.out.println();
             }
             if(family.get(i).equals("Yu Gothic Regular & Yu Gothic UI Semilight")) break;
         }
