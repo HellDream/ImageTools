@@ -120,9 +120,9 @@ public class FrontEndImageManager {
         if (img == null) return;
         double ratioX = thumbnailView.getFitWidth() / img.getWidth();
         double ratioY = thumbnailView.getFitHeight() / img.getHeight();
-        double reducCoeff = ratioX >= ratioY ? ratioY : ratioX;
-        double w = img.getWidth() * reducCoeff;
-        double h = img.getHeight() * reducCoeff;
+        double reduceCoeff = ratioX >= ratioY ? ratioY : ratioX;
+        double w = img.getWidth() * reduceCoeff;
+        double h = img.getHeight() * reduceCoeff;
         thumbnailView.setX((thumbnailView.getFitWidth() - w) / 2);
         thumbnailView.setY((thumbnailView.getFitHeight() - h) / 2);
 

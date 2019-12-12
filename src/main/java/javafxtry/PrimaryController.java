@@ -57,6 +57,8 @@ public class PrimaryController implements Initializable, ImageCommand {
                 new FileChooser.ExtensionFilter("PNG", "*.png")
         );
         File originFile = fileChooser.showOpenDialog(App.stage);
+        if(originFile==null)
+            return;
         recentDir = originFile.getParent();
         String path = originFile.getPath();
         String fileName = originFile.getName();
@@ -73,6 +75,8 @@ public class PrimaryController implements Initializable, ImageCommand {
 
 
     public void saveImage() {
+        if(frontEndManager.getImageSize()==0)
+            return;
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save Image");
         fileChooser.setInitialDirectory(new File(recentDir == null ? System.getProperty("user.home") : recentDir));
@@ -136,6 +140,8 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     @FXML
     public void ImageRotateOp(MouseEvent event) throws FileNotFoundException {
+        if(frontEndManager.getImageSize()==0)
+            return;
         if (event.isPrimaryButtonDown()) {
             Pair<String, Image> topImage = frontEndManager.getTopImage();
             if (topImage.getKey() == null)
@@ -247,21 +253,49 @@ public class PrimaryController implements Initializable, ImageCommand {
         locateImg(mainImage);
     }
 
-    @FXML
-    private TextField textField;
 
     public void ImageTextOp(MouseEvent event) {
         initializeText();
     }
 
     private void initializeText() {
+        if (frontEndManager.getImageSize() == 0)
+            return;
+        try {
+            openImageTextStage();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
+    private void openImageTextStage() throws IOException {
+        Stage stage = new Stage();
+        stage.setTitle("Image Text");
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("imageText.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.initOwner(App.stage);
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.show();
+        StageManager.STAGE.put("ImageTextStage", stage);
+        StageManager.CONTROLLER.put("PrimaryController", this);
+        stage.setOnCloseRequest(e -> {
+//            Pair<String, Image> topImage = frontEndManager.getTopImage();
+            frontEndManager.removeTo(mainImage.getImage());
+            StageManager.STAGE.remove("ImageTextStage");
+            StageManager.CONTROLLER.remove("PrimaryController");
+        });
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         IMAGE_VIEW_PARAMS.put("fitHeight", mainImage.getFitHeight());
         IMAGE_VIEW_PARAMS.put("fitWidth", mainImage.getFitWidth());
+        try{
+            imageManager.getFontFamily(Constants.FONT_MAP);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

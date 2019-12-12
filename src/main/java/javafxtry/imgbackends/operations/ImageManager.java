@@ -4,13 +4,14 @@ import javafxtry.imgbackends.utils.Constants;
 import javafxtry.imgbackends.utils.DateTimeUtils;
 import org.im4java.core.*;
 import org.im4java.process.ArrayListOutputConsumer;
+import org.im4java.process.OutputConsumer;
 import sun.awt.OSInfo;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ImageManager {
     public static ImageManager manager = null;
@@ -75,9 +76,20 @@ public class ImageManager {
      * @description: add text to Img
      * @param: filepath, text, font, gravity, pointsize, color
      */
-    public String addImgText(String filepath, String text, String font, String gravity, int pointsize, String color) throws Exception {
+    public String addImgText(String filepath, String text, String font, int pointsize, String color) throws Exception {
         IMOperation operation = new IMOperation();
-        operation.font(font).gravity(gravity).pointsize(pointsize).fill(color).draw(text);
+        operation.font(font).pointsize(pointsize).fill(color).draw(text);
+        operation.addImage(filepath);
+        String tmpFilepath = Constants.CACHES + DateTimeUtils.getCurrentDateTime() + ".jpg";
+        operation.addImage(tmpFilepath);
+        convertCmd.run(operation);
+        return tmpFilepath;
+    }
+
+    public String addText(String filepath, String text, String font, int x, int y,Integer pointsize, String color) throws InterruptedException, IOException, IM4JavaException {
+        IMOperation operation = new IMOperation();
+        System.out.println(font);
+        operation.font(font).pointsize(pointsize).fill(color).draw("text "+x+","+y+" \'"+text+"\'");
         operation.addImage(filepath);
         String tmpFilepath = Constants.CACHES + DateTimeUtils.getCurrentDateTime() + ".jpg";
         operation.addImage(tmpFilepath);
@@ -135,13 +147,46 @@ public class ImageManager {
             imageInfo.put("Type", result[5]);
         }
         return imageInfo;
+    }
+    public void getFontFamily(Map<String, String> fontMap)throws Exception{
+        IMOperation operation = new IMOperation();
+        operation.list("font");
+        operation.encoding("UTF-8");
+//        operation.label("@./chinese_words.utf8");
+        ArrayListOutputConsumer output = new ArrayListOutputConsumer();
+        convertCmd.setOutputConsumer(output);
+        convertCmd.run(operation);
+        List<String> out = output.getOutput();
+        List<String> fonts = new ArrayList<>();
+        List<String> family = new ArrayList<>();
+        for(String s:out){
+            s = s.trim();
+            if(s.startsWith("Font: ")){
+                int start = s.indexOf("Font: ");
+                fonts.add(new String(s.substring(start+6).getBytes(), StandardCharsets.UTF_8));
+            }else if(s.startsWith("family: ")){
+                int start = s.indexOf("family: ");
+                family.add(new String(s.substring(start+8).getBytes(), StandardCharsets.UTF_8));
+            }
+        }
+        for(int i=0;i<family.size();i++){
+            if(!fontMap.containsKey(family.get(i))){
+//                System.out.print(family.get(i)+"        "+fonts.get(i));
+                fontMap.put(family.get(i),fonts.get(i));
+                System.out.println();
+            }
+            if(family.get(i).equals("Yu Gothic Regular & Yu Gothic UI Semilight")) break;
+        }
 
     }
 
     public static void main(String[] args) throws Exception {
         Constants.initialize("D:\\ImageMagick-7.0.8-Q16");
-        String filePath = "C:\\Users\\YU YE\\Pictures\\IMG_6077.JPG";
+//        String filePath = "C:\\Users\\YU YE\\Pictures\\IMG_6077.JPG";
         ImageManager manager = ImageManager.getInstance();
-        manager.identifyImg(filePath);
+//        String tmp = manager.addText(filePath, "abcdefg","Arial",100,100,23,"black");
+//        System.out.println(tmp);
+        Map<String, String> map = new TreeMap<>();
+        manager.getFontFamily(map);
     }
 }
