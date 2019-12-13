@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -30,6 +31,13 @@ import java.util.ResourceBundle;
 import static javafxtry.imgbackends.utils.Constants.FONT_MAP;
 import static javafxtry.imgfrontends.FrontEndImageManager.locateImg;
 
+/**
+ * @ClassName ImageTextController
+ * @Description controller for adding text to image
+ * @Author Zhenyu YE
+ * @Date 2019/12/12 21:09
+ * @Version 1.0
+ **/
 public class ImageTextController implements Initializable {
     public ImageView textImageView;
     public Pane imagePane;
@@ -92,6 +100,14 @@ public class ImageTextController implements Initializable {
             model.setTextColor((Color) text.getFill());
             String color = model.getRGBAColor();
             Pair<String, Image> topImage = frontEndManager.getTopImage();
+            String font = FONT_MAP.get(model.getFontFamily());
+            if (font == null) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText("Current Text font does not exist");
+                alert.setHeaderText("Information");
+                alert.showAndWait();
+                return;
+            }
             String newImagePath = backendManager.addText(topImage.getKey(), model.getText(), FONT_MAP.get(model.getFontFamily()), actualX, actualY, (int) (model.getFontSize() / ratio), color);
             Image newImage = null;
             try {

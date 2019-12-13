@@ -19,6 +19,13 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
+/**
+ * @ClassName ImageManager
+ * @Description Backend Image manager
+ * @Author Zhenyu YE
+ * @Date 2019/12/12 21:09
+ * @Version 1.0
+ **/
 public class ImageManager {
     public static ImageManager manager = null;
     private ConvertCmd convertCmd;
@@ -42,8 +49,10 @@ public class ImageManager {
     }
 
     /**
-     * @description: rotate image
-     * @param: filepath, angle
+     * Rotate image
+     * @param filepath file path
+     * @param angle rotate angle
+     * @return new image filepath
      */
     public String rotate(String filepath, double angle) {
         IMOperation operation = new IMOperation();
@@ -61,8 +70,12 @@ public class ImageManager {
     }
 
     /**
-     * @description: cut Image
-     * @param: filepath, x1, y1 -- start axles, x2, y2 -- end axles
+     * Crop Image
+     * @param filepath file path of image about to crop
+     * @param x1 start index at x-axis
+     * @param y1 start index at y-axis
+     * @param width width to crop
+     * @param height height to crop
      */
     public String cutImage(String filepath, int x1, int y1, int width, int height) {
         IMOperation operation = new IMOperation();
@@ -79,9 +92,10 @@ public class ImageManager {
     }
 
     /**
-     * @description: add text to Img
-     * @param: filepath, text, font, gravity, pointsize, color
+     * Add text to Img
+     * @deprecated
      */
+    @Deprecated
     public String addImgText(String filepath, String text, String font, int pointsize, String color) throws Exception {
         IMOperation operation = new IMOperation();
         operation.font(font).pointsize(pointsize).fill(color).draw(text);
@@ -92,6 +106,18 @@ public class ImageManager {
         return tmpFilepath;
     }
 
+
+    /**
+     * TODO
+     * @param filepath file path of image about to add text
+     * @param text text
+     * @param font font family
+     * @param x index x of text
+     * @param y index y of text
+     * @param pointsize font size of the text
+     * @param color font color
+     * @return file path of new image
+     */
     public String addText(String filepath, String text, String font, int x, int y,Integer pointsize, String color) throws InterruptedException, IOException, IM4JavaException {
         IMOperation operation = new IMOperation();
         System.out.println(font);
@@ -113,6 +139,13 @@ public class ImageManager {
         return tmpFilepath;
     }
 
+    /**
+     * Generate thumbnail image
+     * @param filepath file path of the image
+     * @param width thumbnail width
+     * @param height thumbnail height
+     * @return new file path of thumbnail image
+     */
     public String getThumbnailImg(String filepath,int width, int height) throws Exception {
         IMOperation operation = new IMOperation();
         operation.resize(width, height);
@@ -124,7 +157,11 @@ public class ImageManager {
         convertCmd.run(operation);
         return tmpFilepath;
     }
-
+    /**
+     * convert image file to other type
+     * @param filepath file path of the image
+     * @param outputpath thumbnail width
+     */
     public void convertImage(String filepath, String outputpath) throws Exception {
         IMOperation operation = new IMOperation();
         operation.addImage(filepath);
@@ -132,6 +169,7 @@ public class ImageManager {
         convertCmd.run(operation);
     }
 
+    @Deprecated
     public Map<String, String> identifyImg(String filepath) throws Exception {
         Map<String, String> imageInfo = new HashMap<>();
         IMOperation operation = new IMOperation();
@@ -154,6 +192,10 @@ public class ImageManager {
         }
         return imageInfo;
     }
+    /**
+     * Get font family
+     * @param fontMap fontMap <family:font>
+     */
     public void getFontFamily(Map<String, String> fontMap)throws Exception{
         IMOperation operation = new IMOperation();
         operation.list("font");
@@ -185,6 +227,11 @@ public class ImageManager {
 
     }
 
+    /**
+     * Get metadata of the image
+     * @param filepath file path of the image
+     * @return map of metadata
+     */
     public Map<String, String> getMetadata(String filepath) throws Exception {
         File file = new File(filepath);
         Metadata  metadata = ImageMetadataReader.readMetadata(file);

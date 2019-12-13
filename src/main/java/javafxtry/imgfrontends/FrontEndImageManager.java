@@ -7,10 +7,17 @@ import javafx.util.Pair;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
-
+/**
+ * @ClassName FrontEndImageManager
+ * @Description frontend Image manager
+ * @Author Zhenyu YE
+ * @Date 2019/12/12 21:09
+ * @Version 1.0
+ **/
 public class FrontEndImageManager {
     public static final Map<String, Object> IMAGE_VIEW_PARAMS = new HashMap<>();
     public static final Map<Image, Double> IMAGE_RATIO = new HashMap<>();
+    // manage cache for image operation
     private Stack<String> imagePaths;
     private Stack<Image> imageStack;
     private Stack<String> imagePathCache;
@@ -34,7 +41,10 @@ public class FrontEndImageManager {
         return manager;
     }
 
-    // modified to local method
+    /**
+     * Locate image in the middle of the scene
+     * @param imageView imageView of the image that is going loacte
+     */
     public static void locateImg(ImageView imageView) {
         Image img = imageView.getImage();
         if (img != null) {
@@ -115,6 +125,11 @@ public class FrontEndImageManager {
         return baseFormat;
     }
 
+    /**
+     * Locate thumbnail image
+     * @param thumbnailView 
+     * @return
+     */
     public void locateThumbnail(ImageView thumbnailView) {
         Image img = thumbnailView.getImage();
         if (img == null) return;

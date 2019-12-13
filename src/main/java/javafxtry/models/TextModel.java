@@ -6,7 +6,13 @@ import jdk.internal.dynalink.beans.StaticClass;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * @ClassName TextModel
+ * @Description model of text
+ * @Author Zhenyu YE
+ * @Date 2019/12/12 21:09
+ * @Version 1.0
+ **/
 public class TextModel {
     private Color textColor;
     private String fontFamily;

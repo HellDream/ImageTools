@@ -15,7 +15,13 @@ import java.io.FileInputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
+/**
+ * @ClassName ThumbnailViewController
+ * @Description controller for thumbnail image
+ * @Author Zhenyu YE
+ * @Date 2019/12/12 21:09
+ * @Version 1.0
+ **/
 public class ThumbnailViewController implements Initializable {
     public ImageView thumbnailImageView;
     private ImageManager imageManager = ImageManager.getInstance();

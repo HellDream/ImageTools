@@ -12,7 +12,13 @@ import javafxtry.models.TextModel;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
+/**
+ * @ClassName TextFieldController
+ * @Description controller for modifying text
+ * @Author Zhenyu YE
+ * @Date 2019/12/12 21:09
+ * @Version 1.0
+ **/
 public class TextFieldController implements Initializable {
     public Slider fontSize;
     public TextField textField;

@@ -8,7 +8,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -34,7 +33,13 @@ import java.util.ResourceBundle;
 
 import static javafxtry.imgfrontends.FrontEndImageManager.IMAGE_VIEW_PARAMS;
 import static javafxtry.imgfrontends.FrontEndImageManager.locateImg;
-
+/**
+ * @ClassName PrimaryController
+ * @Description controller for main interface
+ * @Author Zhenyu YE
+ * @Date 2019/12/12 21:09
+ * @Version 1.0
+ **/
 public class PrimaryController implements Initializable, ImageCommand {
     public ImageView mainImage;
     public Pane imagePane;
@@ -43,6 +48,9 @@ public class PrimaryController implements Initializable, ImageCommand {
     private ImageManager imageManager = ImageManager.getInstance();
     private FrontEndImageManager frontEndManager = FrontEndImageManager.getInstance();
 
+    /**
+     * Open image file
+     */
     @FXML
     private void openFile() throws IOException {
         FileChooser fileChooser = new FileChooser();
@@ -57,7 +65,7 @@ public class PrimaryController implements Initializable, ImageCommand {
                 new FileChooser.ExtensionFilter("PNG", "*.png")
         );
         File originFile = fileChooser.showOpenDialog(App.stage);
-        if(originFile==null)
+        if (originFile == null)
             return;
         recentDir = originFile.getParent();
         String path = originFile.getPath();
@@ -73,25 +81,9 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     }
 
-
-    public void saveImage() {
-        if(frontEndManager.getImageSize()==0)
-            return;
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Save Image");
-        fileChooser.setInitialDirectory(new File(recentDir == null ? System.getProperty("user.home") : recentDir));
-        fileChooser.setInitialFileName(frontEndManager.getBaseImageName() + "." + frontEndManager.getBaseFormat());
-        File file = fileChooser.showSaveDialog(App.stage);
-        if (file != null) {
-            try {
-                ImageIO.write(SwingFXUtils.fromFXImage(mainImage.getImage(), null), frontEndManager.getBaseFormat(), file);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-        this.isSave = true;
-    }
-
+    /**
+     * Close image platform and clean cache
+     */
     @FXML
     public void closeImage() {
         if (!isSave) {
@@ -120,14 +112,45 @@ public class PrimaryController implements Initializable, ImageCommand {
         App.stage.close();
     }
 
+    /**
+     * save modified image
+     */
+    public void saveImage() {
+        if (frontEndManager.getImageSize() == 0)
+            return;
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save Image");
+        fileChooser.setInitialDirectory(new File(recentDir == null ? System.getProperty("user.home") : recentDir));
+        fileChooser.setInitialFileName(frontEndManager.getBaseImageName() + "." + frontEndManager.getBaseFormat());
+        File file = fileChooser.showSaveDialog(App.stage);
+        if (file != null) {
+            try {
+                ImageIO.write(SwingFXUtils.fromFXImage(mainImage.getImage(), null), frontEndManager.getBaseFormat(), file);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        this.isSave = true;
+    }
+
+    /**
+     * The 'about' menu
+     *
+     * @param event click action
+     */
     @FXML
     public void about(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("This is a About Alert");
-        alert.setHeaderText(null);
+        alert.setContentText("Image Management Tool Version 1.0");
+        alert.setHeaderText("About");
         alert.showAndWait();
     }
 
+    /**
+     * Main entry method for cutting img
+     *
+     * @param event Mouse event
+     */
     @FXML
     public void ImageCutOp(MouseEvent event) throws IOException {
         if (event.getClickCount() != 0) {
@@ -138,9 +161,14 @@ public class PrimaryController implements Initializable, ImageCommand {
         }
     }
 
+    /**
+     * Rotate image method
+     *
+     * @param event Mouse event
+     */
     @FXML
     public void ImageRotateOp(MouseEvent event) throws FileNotFoundException {
-        if(frontEndManager.getImageSize()==0)
+        if (frontEndManager.getImageSize() == 0)
             return;
         if (event.isPrimaryButtonDown()) {
             Pair<String, Image> topImage = frontEndManager.getTopImage();
@@ -156,6 +184,11 @@ public class PrimaryController implements Initializable, ImageCommand {
         }
     }
 
+    /**
+     * Generate thumbnail of image, main entry method
+     *
+     * @param event Mouse event
+     */
     public void viewThumbnail(MouseEvent event) {
         if (frontEndManager.getImageSize() == 0)
             return;
@@ -167,6 +200,11 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     }
 
+    /**
+     * Open thumbnail stage to generate thumbnail
+     *
+     * @throws IOException IOException
+     */
     private void openThumbnailStage() throws IOException {
         Stage stage = new Stage();
         stage.setTitle("Thumbnail");
@@ -183,6 +221,11 @@ public class PrimaryController implements Initializable, ImageCommand {
         });
     }
 
+    /**
+     * Open cropping stage to cut image
+     *
+     * @throws IOException IOException
+     */
     private void openImageCutStage() throws IOException {
         if (frontEndManager.getImageSize() == 0)
             return;
@@ -204,9 +247,14 @@ public class PrimaryController implements Initializable, ImageCommand {
             StageManager.STAGE.remove("ImageCutStage");
             StageManager.CONTROLLER.remove("PrimaryController");
         });
-
     }
 
+
+    /**
+     * Export image to other image file
+     *
+     * @param event Mouse event
+     */
     public void exportImage(MouseEvent event) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Export Image");
@@ -229,6 +277,11 @@ public class PrimaryController implements Initializable, ImageCommand {
 
     }
 
+    /**
+     * Redo option main entry method
+     *
+     * @param event Mouse event
+     */
     public void redoOp(MouseEvent event) {
         if (frontEndManager.getCacheSize() == 0) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -241,6 +294,11 @@ public class PrimaryController implements Initializable, ImageCommand {
         locateImg(mainImage);
     }
 
+    /**
+     * Undo option main entry method
+     *
+     * @param event Mouse event
+     */
     public void undoOp(MouseEvent event) {
         if (frontEndManager.getImageSize() == 1) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -253,12 +311,12 @@ public class PrimaryController implements Initializable, ImageCommand {
         locateImg(mainImage);
     }
 
-
+    /**
+     * Adding text operation main entry method
+     *
+     * @param event Mouse event
+     */
     public void ImageTextOp(MouseEvent event) {
-        initializeText();
-    }
-
-    private void initializeText() {
         if (frontEndManager.getImageSize() == 0)
             return;
         try {
@@ -268,6 +326,11 @@ public class PrimaryController implements Initializable, ImageCommand {
         }
     }
 
+    /**
+     * Open text image stage
+     *
+     * @throws IOException IOException
+     */
     private void openImageTextStage() throws IOException {
         Stage stage = new Stage();
         stage.setTitle("Image Text");
@@ -291,9 +354,9 @@ public class PrimaryController implements Initializable, ImageCommand {
     public void initialize(URL location, ResourceBundle resources) {
         IMAGE_VIEW_PARAMS.put("fitHeight", mainImage.getFitHeight());
         IMAGE_VIEW_PARAMS.put("fitWidth", mainImage.getFitWidth());
-        try{
+        try {
             imageManager.getFontFamily(Constants.FONT_MAP);
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -314,6 +377,11 @@ public class PrimaryController implements Initializable, ImageCommand {
         this.isSave = save;
     }
 
+    /**
+     * Show image property
+     *
+     * @param event ActionEvent
+     */
     public void showProperty(ActionEvent event) {
         if (frontEndManager.getImageSize() == 0) {
             Alert alert = new Alert(Alert.AlertType.WARNING);

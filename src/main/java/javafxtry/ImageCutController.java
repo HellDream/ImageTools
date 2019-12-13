@@ -24,7 +24,13 @@ import java.util.ResourceBundle;
 
 import static javafxtry.imgfrontends.FrontEndImageManager.locateImg;
 
-
+/**
+ * @ClassName ImageCutController
+ * @Description controller for cropping
+ * @Author Zhenyu YE
+ * @Date 2019/12/12 21:09
+ * @Version 1.0
+ **/
 public class ImageCutController implements Initializable, ImageCommand {
 
     public ImageView cutMainImage;
