@@ -1,5 +1,10 @@
 package javafxtry.imgbackends.operations;
 
+import com.drew.imaging.ImageMetadataReader;
+import com.drew.metadata.Directory;
+import com.drew.metadata.Metadata;
+import com.drew.metadata.MetadataReader;
+import com.drew.metadata.Tag;
 import javafxtry.imgbackends.utils.Constants;
 import javafxtry.imgbackends.utils.DateTimeUtils;
 import org.im4java.core.*;
@@ -7,6 +12,7 @@ import org.im4java.process.ArrayListOutputConsumer;
 import org.im4java.process.OutputConsumer;
 import sun.awt.OSInfo;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -179,13 +185,31 @@ public class ImageManager {
 
     }
 
+    public Map<String, String> getMetadata(String filepath) throws Exception {
+        File file = new File(filepath);
+        Metadata  metadata = ImageMetadataReader.readMetadata(file);
+        Map<String, String> imageInfo = new HashMap<>();
+        for (Directory directory : metadata.getDirectories()) {
+            for (Tag tag : directory.getTags()) {
+                //格式化输出[directory.getName()] - tag.getTagName() = tag.getDescription()
+                imageInfo.put(tag.getTagName(), tag.getDescription());
+            }
+            if (directory.hasErrors()) {
+                for (String error : directory.getErrors()) {
+                    System.err.format("ERROR: %s", error);
+                }
+            }
+        }
+        return imageInfo;
+    }
+
     public static void main(String[] args) throws Exception {
         Constants.initialize("D:\\ImageMagick-7.0.8-Q16");
-//        String filePath = "C:\\Users\\YU YE\\Pictures\\IMG_6077.JPG";
+        String filePath = "C:\\Users\\YU YE\\Pictures\\IMG_6077.JPG";
         ImageManager manager = ImageManager.getInstance();
 //        String tmp = manager.addText(filePath, "abcdefg","Arial",100,100,23,"black");
 //        System.out.println(tmp);
-        Map<String, String> map = new TreeMap<>();
-        manager.getFontFamily(map);
+//        Map<String, String> map = new TreeMap<>();
+        manager.getMetadata(filePath);
     }
 }

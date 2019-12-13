@@ -325,7 +325,7 @@ public class PrimaryController implements Initializable, ImageCommand {
             alert.setHeaderText("Image Property");
             String imagepath = frontEndManager.getTopImage().getKey();
             try {
-                Map<String, String> imageInfo = imageManager.identifyImg(imagepath);
+                Map<String, String> imageInfo = imageManager.getMetadata(imagepath);
                 StringBuilder sb = new StringBuilder();
                 for (String key : imageInfo.keySet()) {
                     sb.append(key).append(": ").append(imageInfo.get(key)).append("\n");

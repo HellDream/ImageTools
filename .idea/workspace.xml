@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="97bfec8c-11be-4f24-aa2f-27ce93e4e9ab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/ImageCutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javafxtry/ImageCutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/PrimaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javafxtry/PrimaryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/imgbackends/operations/ImageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javafxtry/imgbackends/operations/ImageManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/imgbackends/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javafxtry/imgbackends/utils/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/operations/ImageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/operations/ImageManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,10 +20,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
+            <state relative-caret-position="1680">
               <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -34,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="295" column="30" selection-start-line="295" selection-start-column="30" selection-end-line="295" selection-end-column="30" />
+            <state relative-caret-position="416">
+              <caret line="330" column="83" lean-forward="true" selection-start-line="330" selection-start-column="83" selection-end-line="330" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,14 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageTextController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="567">
               <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-              <folding>
-                <element signature="e#1066#1067#0" expanded="true" />
-                <element signature="e#1102#1103#0" expanded="true" />
-                <element signature="e#1088#1089#0" expanded="true" />
-                <element signature="e#1120#1121#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -64,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/operations/ImageManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="157">
+              <caret line="187" column="42" selection-start-line="187" selection-start-column="31" selection-end-line="187" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,28 +66,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="33" column="35" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/models/TextModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-687">
+            <state relative-caret-position="189">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#266#267#0" expanded="true" />
-                <element signature="e#298#299#0" expanded="true" />
-                <element signature="e#315#316#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-                <element signature="e#394#395#0" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#479#480#0" expanded="true" />
-                <element signature="e#523#524#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#590#591#0" expanded="true" />
-                <element signature="e#639#640#0" expanded="true" />
-                <element signature="e#679#680#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
-                <element signature="e#737#738#0" expanded="true" />
-                <element signature="e#777#778#0" expanded="true" />
-                <element signature="e#809#810#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="630">
               <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -116,12 +101,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="189">
               <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#214#215#0" expanded="true" />
-                <element signature="e#266#267#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,7 +113,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/FrontEndImageManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="651">
               <caret line="37" column="32" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -142,7 +125,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/TextFieldController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
+            <state relative-caret-position="777">
               <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -182,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/main/java/AboutController.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/AboutController.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/Main.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/javafxtry/css/primary.css" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/ImageApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/SecondaryController.java" />
@@ -206,12 +188,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/javafxtry/imageText.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/javafxtry/textField.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/models/TextModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/TextFieldController.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/operations/ImageManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/ImageTextController.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/operations/ImageManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java" />
       </list>
     </option>
   </component>
@@ -256,6 +239,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -369,38 +353,11 @@
               <item name="hellojavafx" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
-            <path>
-              <item name="hellojavafx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.im4java:im4java:1.4.0" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="hellojavafx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.im4java:im4java:1.4.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="im4java-1.4.0.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hellojavafx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.im4java:im4java:1.4.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="im4java-1.4.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="im4java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hellojavafx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.im4java:im4java:1.4.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="im4java-1.4.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="im4java" type="462c0819:PsiDirectoryNode" />
-              <item name="process" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -589,7 +546,8 @@
       <workItem from="1576018401096" duration="2628000" />
       <workItem from="1576021181655" duration="10244000" />
       <workItem from="1576097497646" duration="2479000" />
-      <workItem from="1576117823333" duration="27410000" />
+      <workItem from="1576117823333" duration="27638000" />
+      <workItem from="1576197639858" duration="839000" />
     </task>
     <task id="LOCAL-00001" summary="Image Crop shade rectangle">
       <created>1571962525699</created>
@@ -717,17 +675,24 @@
       <option name="project" value="LOCAL" />
       <updated>1576145686137</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="minor update of crop">
+      <created>1576146593707</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1576146593707</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225449000" />
+    <option name="totallyTimeSpent" value="226516000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24463807" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24798928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -736,8 +701,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32841823" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.47050938" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.36193028" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.15951742" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36193028" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -779,14 +744,15 @@
     <MESSAGE value="implemented imageCut stage redo and undo" />
     <MESSAGE value="update cropping algorithm" />
     <MESSAGE value="add image text op" />
-    <option name="LAST_COMMIT_MESSAGE" value="add image text op" />
+    <MESSAGE value="minor update of crop" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor update of crop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/operations/ImageManager.java</url>
-          <line>91</line>
+          <line>97</line>
           <properties />
           <option name="timeStamp" value="39" />
         </line-breakpoint>
@@ -869,13 +835,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/javafxtry/secondary.fxml" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" selection-start-line="27" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/DateTimeUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -967,21 +926,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/caches/17066139441200.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/caches/17940192780100.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/caches/18254292806900.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/caches/19067496028100.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/caches/18819798421200.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/caches/17066139441200.jpg" />
+    <entry file="file://$PROJECT_DIR$/caches/17940192780100.jpg" />
+    <entry file="file://$PROJECT_DIR$/caches/18254292806900.jpg" />
+    <entry file="file://$PROJECT_DIR$/caches/19067496028100.jpg" />
+    <entry file="file://$PROJECT_DIR$/caches/18819798421200.jpg" />
     <entry file="jar://D:/Java/jdk1.8.0_131/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -993,9 +942,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/caches/19155466044400.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/caches/19155466044400.jpg" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/javafxtry/imageText.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1008,16 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="64" column="15" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1035,10 +972,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java">
+    <entry file="file://$PROJECT_DIR$/chinese_words.utf8" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="295" column="30" selection-start-line="295" selection-start-column="30" selection-end-line="295" selection-end-column="30" />
+        <state relative-caret-position="1680">
+          <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageTextController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/models/TextModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1047,23 +1012,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="189">
           <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#214#215#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chinese_words.utf8">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/TextFieldController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1072,7 +1022,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/FrontEndImageManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="651">
           <caret line="37" column="32" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1080,59 +1030,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/TextFieldController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/operations/ImageManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="157">
+          <caret line="187" column="42" selection-start-line="187" selection-start-column="31" selection-end-line="187" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/models/TextModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-687">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#777#778#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageTextController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding>
-            <element signature="e#1066#1067#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-            <element signature="e#1088#1089#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
+        <state relative-caret-position="416">
+          <caret line="330" column="83" lean-forward="true" selection-start-line="330" selection-start-column="83" selection-end-line="330" selection-end-column="84" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
