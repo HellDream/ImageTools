@@ -71,7 +71,9 @@ public class ImageCutController implements Initializable, ImageCommand {
         rectangleView = new Rectangle();
 //        imagePane.getChildren().add(rectangleView);
     }
-
+    /**
+     * Shadow the image
+     */
     public void shadeImage() {
         shadeRectangle.setHeight(cutMainImage.getFitHeight());
         shadeRectangle.setWidth(cutMainImage.getFitWidth());
@@ -88,7 +90,10 @@ public class ImageCutController implements Initializable, ImageCommand {
         shadowShape.setOpacity(0.6);
         imagePane.getChildren().add(shadowShape);
     }
-
+    /**
+     * Quit cropping
+     * @param event
+     */
     public void cropAboard(MouseEvent event) {
         if (originImage != null) {
             while (!frontEndManager.getTopImage().getValue().equals(originImage)) {
@@ -100,6 +105,10 @@ public class ImageCutController implements Initializable, ImageCommand {
 
     }
 
+    /**
+     * Save cropped image
+     * @param event
+     */
     public void cropSave(MouseEvent event) {
         Pair<String, Image> topImage = frontEndManager.getTopImage();
         PrimaryController controller = (PrimaryController) StageManager.CONTROLLER.get("PrimaryController");
@@ -114,6 +123,10 @@ public class ImageCutController implements Initializable, ImageCommand {
         currentStage.close();
     }
 
+    /**
+     * Redo operation
+     * @param event MouseEvent
+     */
     public void redoOp(MouseEvent event) {
         if (frontEndManager.getCacheSize() == 0) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -132,6 +145,10 @@ public class ImageCutController implements Initializable, ImageCommand {
         cutMainImage.setImage(frontEndManager.getTopImage().getValue());
     }
 
+    /**
+     * Undo operation
+     * @param event MouseEvent
+     */
     public void undoOp(MouseEvent event) {
         if(frontEndManager.getTopImage().getValue().equals(originImage)){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -150,7 +167,12 @@ public class ImageCutController implements Initializable, ImageCommand {
         cutMainImage.setImage(frontEndManager.getTopImage().getValue());
     }
 
-
+    /**
+     * @ClassName CropHandler
+     * @Description Cropping handler
+     * @Author Zhenyu YE
+     * @Version 1.0
+     **/
     class CropHandler {
         double mousePressX;
         double mousePressY;

@@ -86,6 +86,10 @@ public class ImageTextController implements Initializable {
 
     }
 
+    /**
+     * Save Texting
+     * @param event event
+     */
     public void textSave(MouseEvent event) throws Exception {
         if (modify) {
             double relateX = text.getX() - textImageView.getX();
@@ -149,6 +153,12 @@ public class ImageTextController implements Initializable {
         text.setY(textImageView.getY() + textImageView.getFitHeight() / 3);
     }
 
+    /**
+     * @ClassName TextHandler
+     * @Description handle layout of the text
+     * @Author Zhenyu YE
+     * @Version 1.0
+     **/
     class TextHandler {
         private double mouseCurrentX;
         private double mouseCurrentY;
