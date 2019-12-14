@@ -2,23 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97bfec8c-11be-4f24-aa2f-27ce93e4e9ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/ImageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/ImageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/ImageTextController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/ImageTextController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/TextFieldController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/TextFieldController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/ThumbnailViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/ThumbnailViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/files/FileManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/operations/ImageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/operations/ImageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/DateTimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/DateTimeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/FrontEndImageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/FrontEndImageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/StageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/StageManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/javafxtry/models/TextModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javafxtry/models/TextModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/ImageCutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javafxtry/ImageCutController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/PrimaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javafxtry/PrimaryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/imgbackends/files/FileManager.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/imgbackends/operations/ImageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javafxtry/imgbackends/operations/ImageManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/imgbackends/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javafxtry/imgbackends/utils/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/imgbackends/utils/DateTimeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javafxtry/imgbackends/utils/DateTimeUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/javafxtry/imgfrontends/StageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javafxtry/imgfrontends/StageManager.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,94 +27,298 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="26" selection-start-line="26" selection-end-line="32" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="145" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#11499#11500#0" expanded="true" />
-                <element signature="e#11533#11534#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageTextController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="104" column="55" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/diagram.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="590.4679894179894" y="868.0">javafxtry.PrimaryController</node>
+                <node x="501.49999999999994" y="356.0">javafxtry.App</node>
+                <node x="259.75" y="1680.5">javafxtry.ImageTextController</node>
+                <node x="173.5" y="1064.0">javafxtry.ImageTextController.TextHandler</node>
+                <node x="1130.4088115588115" y="35.0">javafxtry.imgbackends.utils.DateTimeUtils</node>
+                <node x="1205.7549603174602" y="1087.0">javafxtry.ThumbnailViewController</node>
+                <node x="10.68048941798952" y="2120.0">javafxtry.TextFieldController</node>
+                <node x="1514.7549603174602" y="1018.0">javafxtry.ImageCutController.CropHandler</node>
+                <node x="167.0174603174603" y="23.5">javafxtry.imgfrontends.StageManager</node>
+                <node x="729.5" y="402.5">javafxtry.ImageCommand</node>
+                <node x="536.7674603174603" y="0.0">javafxtry.imgbackends.utils.Constants</node>
+                <node x="908.5" y="240.5">javafxtry.imgbackends.operations.ImageManager</node>
+                <node x="21.5" y="1087.5">javafxtry.models.TextModel</node>
+                <node x="1316.5" y="194.0">javafxtry.imgfrontends.FrontEndImageManager</node>
+                <node x="1416.3390059015055" y="1623.0">javafxtry.ImageCutController</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="javafxtry.ImageCutController.CropHandler" target="javafxtry.imgfrontends.FrontEndImageManager">
+                  <point x="92.0" y="-142.5" />
+                  <point x="1790.7549603174602" y="728.0" />
+                  <point x="1534.611111111111" y="728.0" />
+                  <point x="67.11111111111109" y="247.0" />
+                </edge>
+                <edge source="javafxtry.TextFieldController" target="javafxtry.ImageTextController">
+                  <point x="100.0" y="-119.5" />
+                  <point x="235.68048941798952" y="2100.0" />
+                  <point x="403.75" y="2100.0" />
+                  <point x="0.0" y="166.0" />
+                </edge>
+                <edge source="javafxtry.PrimaryController" target="javafxtry.imgfrontends.StageManager">
+                  <point x="-128.0" y="-292.5" />
+                  <point x="606.4679894179894" y="778.0" />
+                  <point x="297.0174603174603" y="778.0" />
+                  <point x="297.0174603174603" y="174.0" />
+                  <point x="312.2674603174603" y="174.0" />
+                  <point x="20.75" y="38.5" />
+                </edge>
+                <edge source="javafxtry.PrimaryController" target="javafxtry.imgbackends.utils.Constants">
+                  <point x="-32.0" y="-292.5" />
+                  <point x="702.4679894179894" y="778.0" />
+                  <point x="719.0" y="778.0" />
+                  <point x="719.0" y="174.0" />
+                  <point x="699.1674603174604" y="174.0" />
+                  <point x="46.400000000000034" y="62.0" />
+                </edge>
+                <edge source="javafxtry.ImageTextController" target="javafxtry.imgfrontends.FrontEndImageManager">
+                  <point x="133.71428571428567" y="-166.0" />
+                  <point x="537.4642857142857" y="1533.0" />
+                  <point x="1504.2549603174602" y="1533.0" />
+                  <point x="1504.2549603174602" y="848.0" />
+                  <point x="1501.0555555555554" y="848.0" />
+                  <point x="33.55555555555543" y="247.0" />
+                </edge>
+                <edge source="javafxtry.ImageTextController" target="javafxtry.imgfrontends.StageManager">
+                  <point x="-72.00000000000006" y="-166.0" />
+                  <point x="331.74999999999994" y="1553.0" />
+                  <point x="163.0" y="1553.0" />
+                  <point x="163.0" y="174.0" />
+                  <point x="229.2674603174603" y="174.0" />
+                  <point x="-62.25" y="38.5" />
+                </edge>
+                <edge source="javafxtry.ImageCutController.CropHandler" target="javafxtry.ImageCutController">
+                  <point x="46.0" y="142.5" />
+                  <point x="1744.7549603174602" y="1563.0" />
+                  <point x="1560.3390059015057" y="1563.0" />
+                  <point x="1.1368683772161603E-13" y="-223.5" />
+                </edge>
+                <edge source="javafxtry.ImageCutController" target="javafxtry.ImageCutController.CropHandler">
+                  <point x="-31.999999999999886" y="-223.5" />
+                  <point x="1528.3390059015057" y="1553.0" />
+                  <point x="1652.7549603174602" y="1553.0" />
+                  <point x="-46.0" y="142.5" />
+                </edge>
+                <edge source="javafxtry.imgbackends.operations.ImageManager" target="javafxtry.imgbackends.utils.Constants">
+                  <point x="-97.0" y="-200.5" />
+                  <point x="1005.5" y="174.0" />
+                  <point x="745.5674603174604" y="174.0" />
+                  <point x="92.80000000000007" y="62.0" />
+                </edge>
+                <edge source="javafxtry.ImageCutController.CropHandler" target="javafxtry.imgbackends.operations.ImageManager">
+                  <point x="-92.0" y="-142.5" />
+                  <point x="1606.7549603174602" y="738.0" />
+                  <point x="1268.7857142857142" y="738.0" />
+                  <point x="166.28571428571422" y="200.5" />
+                </edge>
+                <edge source="javafxtry.App" target="javafxtry.imgbackends.utils.Constants">
+                  <point x="51.75" y="-85.0" />
+                  <point x="656.75" y="174.0" />
+                  <point x="652.7674603174603" y="174.0" />
+                  <point x="0.0" y="62.0" />
+                </edge>
+                <edge source="javafxtry.ImageTextController" target="javafxtry.ImageTextController.TextHandler">
+                  <point x="-30.85714285714289" y="-166.0" />
+                  <point x="372.8928571428571" y="1533.0" />
+                  <point x="288.625" y="1533.0" />
+                  <point x="-38.375" y="96.5" />
+                </edge>
+                <edge source="javafxtry.ImageCutController" target="javafxtry.ImageCommand">
+                  <point x="-95.99999999999989" y="-223.5" />
+                  <point x="1464.3390059015057" y="1493.0" />
+                  <point x="1020.7299603174602" y="1493.0" />
+                  <point x="1020.7299603174602" y="778.0" />
+                  <point x="848.75" y="778.0" />
+                  <point x="39.75" y="38.5" />
+                </edge>
+                <edge source="javafxtry.App" target="javafxtry.PrimaryController">
+                  <point x="25.875" y="85.0" />
+                  <point x="630.875" y="758.0" />
+                  <point x="670.4679894179894" y="758.0" />
+                  <point x="-64.0" y="-292.5" />
+                </edge>
+                <edge source="javafxtry.TextFieldController" target="javafxtry.imgbackends.utils.Constants">
+                  <point x="-50.0" y="-119.5" />
+                  <point x="85.68048941798952" y="2090.0" />
+                  <point x="11.0" y="2090.0" />
+                  <point x="11.0" y="848.0" />
+                  <point x="334.0174603174603" y="848.0" />
+                  <point x="334.0174603174603" y="164.0" />
+                  <point x="559.9674603174603" y="164.0" />
+                  <point x="-92.80000000000001" y="62.0" />
+                </edge>
+                <edge source="javafxtry.ImageTextController.TextHandler" target="javafxtry.ImageTextController">
+                  <point x="38.375" y="96.5" />
+                  <point x="365.375" y="1523.0" />
+                  <point x="393.46428571428567" y="1523.0" />
+                  <point x="-10.285714285714334" y="-166.0" />
+                </edge>
+                <edge source="javafxtry.TextFieldController" target="javafxtry.imgfrontends.StageManager">
+                  <point x="-100.0" y="-119.5" />
+                  <point x="35.68048941798952" y="2100.0" />
+                  <point x="0.0" y="2100.0" />
+                  <point x="0.0" y="164.0" />
+                  <point x="187.7674603174603" y="164.0" />
+                  <point x="-103.75" y="38.5" />
+                </edge>
+                <edge source="javafxtry.TextFieldController" target="javafxtry.models.TextModel">
+                  <point x="0.0" y="-119.5" />
+                  <point x="135.68048941798952" y="2100.0" />
+                  <point x="96.68048941798952" y="2100.0" />
+                  <point x="96.68048941798952" y="1603.0" />
+                  <point x="34.60000000000002" y="1603.0" />
+                  <point x="-52.39999999999998" y="73.0" />
+                </edge>
+                <edge source="javafxtry.ImageTextController" target="javafxtry.imgbackends.operations.ImageManager">
+                  <point x="92.57142857142856" y="-166.0" />
+                  <point x="496.32142857142856" y="1513.0" />
+                  <point x="962.0799603174603" y="1513.0" />
+                  <point x="962.0799603174603" y="818.0" />
+                  <point x="1102.5" y="818.0" />
+                  <point x="0.0" y="200.5" />
+                </edge>
+                <edge source="javafxtry.ImageCutController" target="javafxtry.PrimaryController">
+                  <point x="-127.99999999999989" y="-223.5" />
+                  <point x="1432.3390059015057" y="1503.0" />
+                  <point x="806.4679894179894" y="1503.0" />
+                  <point x="72.0" y="292.5" />
+                </edge>
+                <edge source="javafxtry.ImageCutController" target="javafxtry.imgfrontends.FrontEndImageManager">
+                  <point x="96.00000000000011" y="-223.5" />
+                  <point x="1656.3390059015057" y="1593.0" />
+                  <point x="1904.25496031746" y="1593.0" />
+                  <point x="1904.25496031746" y="708.0" />
+                  <point x="1601.7222222222222" y="708.0" />
+                  <point x="134.22222222222217" y="247.0" />
+                </edge>
+                <edge source="javafxtry.ImageTextController.TextHandler" target="javafxtry.App">
+                  <point x="76.75" y="-96.5" />
+                  <point x="403.75" y="848.0" />
+                  <point x="527.375" y="848.0" />
+                  <point x="-77.625" y="85.0" />
+                </edge>
+                <edge source="javafxtry.App" target="javafxtry.imgfrontends.StageManager">
+                  <point x="-51.75" y="-85.0" />
+                  <point x="553.25" y="154.0" />
+                  <point x="353.76746031746023" y="154.0" />
+                  <point x="62.24999999999994" y="38.5" />
+                </edge>
+                <edge source="javafxtry.ImageTextController" target="javafxtry.models.TextModel">
+                  <point x="-133.71428571428578" y="-166.0" />
+                  <point x="270.0357142857142" y="1583.0" />
+                  <point x="87.0" y="1583.0" />
+                  <point x="0.0" y="73.0" />
+                </edge>
+                <edge source="javafxtry.ImageCutController" target="javafxtry.imgfrontends.StageManager">
+                  <point x="128.0000000000001" y="-223.5" />
+                  <point x="1688.3390059015057" y="1603.0" />
+                  <point x="1915.25496031746" y="1603.0" />
+                  <point x="1915.25496031746" y="144.0" />
+                  <point x="395.26746031746023" y="144.0" />
+                  <point x="103.74999999999994" y="38.5" />
+                </edge>
+                <edge source="javafxtry.imgbackends.operations.ImageManager" target="javafxtry.imgbackends.utils.DateTimeUtils">
+                  <point x="97.0" y="-200.5" />
+                  <point x="1199.5" y="174.0" />
+                  <point x="1234.9088115588115" y="174.0" />
+                  <point x="0.0" y="27.0" />
+                </edge>
+                <edge source="javafxtry.ThumbnailViewController" target="javafxtry.imgfrontends.FrontEndImageManager">
+                  <point x="115.20000000000005" y="-73.5" />
+                  <point x="1464.9549603174603" y="848.0" />
+                  <point x="1467.5" y="848.0" />
+                  <point x="0.0" y="247.0" />
+                </edge>
+                <edge source="javafxtry.ImageTextController" target="javafxtry.imgbackends.utils.Constants">
+                  <point x="30.85714285714289" y="-166.0" />
+                  <point x="434.6071428571429" y="1483.0" />
+                  <point x="490.99999999999994" y="1483.0" />
+                  <point x="490.99999999999994" y="174.0" />
+                  <point x="606.3674603174603" y="174.0" />
+                  <point x="-46.39999999999998" y="62.0" />
+                </edge>
+                <edge source="javafxtry.ThumbnailViewController" target="javafxtry.App">
+                  <point x="-115.20000000000005" y="-73.5" />
+                  <point x="1234.5549603174602" y="768.0" />
+                  <point x="682.625" y="768.0" />
+                  <point x="77.625" y="85.0" />
+                </edge>
+                <edge source="javafxtry.PrimaryController" target="javafxtry.App">
+                  <point x="-96.0" y="-292.5" />
+                  <point x="638.4679894179894" y="768.0" />
+                  <point x="579.125" y="768.0" />
+                  <point x="-25.875" y="85.0" />
+                </edge>
+                <edge source="javafxtry.ImageTextController" target="javafxtry.PrimaryController">
+                  <point x="72.0" y="-166.0" />
+                  <point x="475.75" y="1503.0" />
+                  <point x="662.4679894179894" y="1503.0" />
+                  <point x="-72.0" y="292.5" />
+                </edge>
+                <edge source="javafxtry.ThumbnailViewController" target="javafxtry.imgbackends.operations.ImageManager">
+                  <point x="0.0" y="-73.5" />
+                  <point x="1349.7549603174602" y="748.0" />
+                  <point x="1213.357142857143" y="748.0" />
+                  <point x="110.85714285714289" y="200.5" />
+                </edge>
+                <edge source="javafxtry.ImageTextController.TextHandler" target="javafxtry.imgfrontends.StageManager">
+                  <point x="-76.75" y="-96.5" />
+                  <point x="250.25" y="838.0" />
+                  <point x="286.0174603174603" y="838.0" />
+                  <point x="286.0174603174603" y="174.0" />
+                  <point x="270.7674603174603" y="174.0" />
+                  <point x="-20.75" y="38.5" />
+                </edge>
+                <edge source="javafxtry.PrimaryController" target="javafxtry.imgfrontends.FrontEndImageManager">
+                  <point x="128.0" y="-292.5" />
+                  <point x="862.4679894179894" y="838.0" />
+                  <point x="1366.8333333333333" y="838.0" />
+                  <point x="-100.66666666666674" y="247.0" />
+                </edge>
+                <edge source="javafxtry.PrimaryController" target="javafxtry.ImageCommand">
+                  <point x="0.0" y="-292.5" />
+                  <point x="734.4679894179894" y="778.0" />
+                  <point x="769.25" y="778.0" />
+                  <point x="-39.75" y="38.5" />
+                </edge>
+                <edge source="javafxtry.PrimaryController" target="javafxtry.imgbackends.operations.ImageManager">
+                  <point x="64.0" y="-292.5" />
+                  <point x="798.4679894179894" y="808.0" />
+                  <point x="1047.0714285714284" y="808.0" />
+                  <point x="-55.42857142857156" y="200.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="967.5714285714284" y="919.0" />
+              <SelectedNodes>
+                <node>javafxtry.ImageCutController.CropHandler</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+                <Category>Inner Classes</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/models/TextModel.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" selection-start-line="8" selection-end-line="14" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" selection-start-line="1" selection-end-line="7" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/StageManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" selection-start-line="6" selection-end-line="12" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/TextFieldController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ThumbnailViewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+            <state relative-caret-position="593">
+              <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,11 +329,89 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/FrontEndImageManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="21">
+              <caret line="9" selection-start-line="9" selection-end-line="15" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageTextController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1470">
+              <caret line="103" column="31" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/operations/ImageManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="21" selection-start-line="21" selection-end-line="27" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/StageManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/models/TextModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/TextFieldController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -199,13 +475,13 @@
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/DateTimeUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/FrontEndImageManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/StageManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/javafxtry/models/TextModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/javafxtry/ImageCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/javafxtry/TextFieldController.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/ThumbnailViewController.java" />
         <option value="$PROJECT_DIR$/src/main/java/javafxtry/ImageTextController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/javafxtry/models/TextModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/javafxtry/ImageCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/javafxtry/TextFieldController.java" />
       </list>
     </option>
   </component>
@@ -239,10 +515,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1100" />
+    <option name="x" value="760" />
+    <option name="y" value="-9" />
+    <option name="width" value="785" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -250,6 +526,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -301,6 +579,16 @@
               <item name="javafxtry" type="462c0819:PsiDirectoryNode" />
               <item name="imgbackends" type="462c0819:PsiDirectoryNode" />
               <item name="operations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hellojavafx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hellojavafx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="javafxtry" type="462c0819:PsiDirectoryNode" />
+              <item name="imgbackends" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hellojavafx" type="b2602c69:ProjectViewProjectNode" />
@@ -361,8 +649,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,26 +656,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/javafxtry" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/javafxtry" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\工作\Java\hellojavafx" />
-      <recent name="D:\工作\Java\hellojavafx\src\main\resources\javafxtry" />
-      <recent name="D:\工作\Java\hellojavafx\src\main\resources\javafxtry\img" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="javafxtry" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="javafxtry.imgbackends.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\工作\Java\hellojavafx\src\main\resources" />
@@ -397,6 +676,14 @@
       <recent name="D:\工作\Java\hellojavafx" />
       <recent name="D:\工作\Java\hellojavafx\src\main\resources\javafxtry" />
       <recent name="D:\工作\Java\hellojavafx\src\main\java\javafxtry\imgfrontends" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="javafxtry.imgbackends.utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\工作\Java\hellojavafx" />
+      <recent name="D:\工作\Java\hellojavafx\src\main\resources\javafxtry" />
+      <recent name="D:\工作\Java\hellojavafx\src\main\resources\javafxtry\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -553,7 +840,12 @@
       <workItem from="1576097497646" duration="2479000" />
       <workItem from="1576117823333" duration="27638000" />
       <workItem from="1576197639858" duration="884000" />
-      <workItem from="1576209722243" duration="6684000" />
+      <workItem from="1576209722243" duration="6772000" />
+      <workItem from="1576261458327" duration="2209000" />
+      <workItem from="1576265746599" duration="655000" />
+      <workItem from="1576297613742" duration="79000" />
+      <workItem from="1576358632226" duration="1474000" />
+      <workItem from="1576361454156" duration="2556000" />
     </task>
     <task id="LOCAL-00001" summary="Image Crop shade rectangle">
       <created>1571962525699</created>
@@ -695,17 +987,24 @@
       <option name="project" value="LOCAL" />
       <updated>1576198499886</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add comments">
+      <created>1576234368033</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1576234368033</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233245000" />
+    <option name="totallyTimeSpent" value="240306000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25134048" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24128686" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -714,7 +1013,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32841823" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.15951742" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.11394102" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.36193028" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -734,6 +1033,9 @@
       <window_info anchor="right" id="Maven" order="6" weight="0.3297587" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Flutter Inspector" order="9" />
+      <window_info anchor="right" id="Flutter Outline" order="10" />
+      <window_info anchor="right" id="Flutter Performance" order="11" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -759,7 +1061,8 @@
     <MESSAGE value="add image text op" />
     <MESSAGE value="minor update of crop" />
     <MESSAGE value="update metadata api" />
-    <option name="LAST_COMMIT_MESSAGE" value="update metadata api" />
+    <MESSAGE value="add comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="add comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -784,9 +1087,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/caches/769575602862000.jpg" />
-    <entry file="file://$PROJECT_DIR$/caches/974938314636400.jpg" />
-    <entry file="file://$PROJECT_DIR$/caches/975020042462000.jpg" />
     <entry file="file://$PROJECT_DIR$/caches/976298033896000.jpg" />
     <entry file="file://$PROJECT_DIR$/caches/978503583892300.jpg" />
     <entry file="file://$PROJECT_DIR$/caches/978640003801000.jpg" />
@@ -846,28 +1146,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/javafxtry/primary.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="30" selection-start-line="30" selection-end-line="38" selection-end-column="30" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/javafxtry/imageCut.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="51" selection-start-line="51" selection-end-line="56" selection-end-column="15" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/javafxtry/thumbnailView.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/javafxtry/css/primary.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -877,12 +1177,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/javafxtry/textField.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="jar://D:/Java/jdk1.8.0_131/javafx-src.zip!/com/sun/javafx/event/EventHandlerManager.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -916,12 +1216,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/caches/19155466044400.jpg" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/javafxtry/imageText.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="jar://D:/Java/jdk1.8.0_131/src.zip!/java/lang/NumberFormatException.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -952,33 +1252,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/aaa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/operations/ImageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="21" selection-start-line="21" selection-end-line="27" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/aaa.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/DateTimeUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -986,84 +1260,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/files/FileManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ThumbnailViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        <state relative-caret-position="-252">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/FrontEndImageManager.java">
+    <entry file="jar://D:/Java/jdk1.8.0_131/javafx-src.zip!/javafx/scene/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="15" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="8413" selection-start-line="8413" selection-end-line="8413" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/StageManager.java">
+    <entry file="jar://D:/Java/jdk1.8.0_131/javafx-src.zip!/javafx/event/Event.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" selection-start-line="6" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/models/TextModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" selection-start-line="8" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" selection-start-line="1" selection-end-line="7" selection-end-column="4" />
+        <state relative-caret-position="247">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageCutController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="26" selection-start-line="26" selection-end-line="32" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/TextFieldController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/files/FileManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ThumbnailViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        <state relative-caret-position="231">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1072,23 +1297,380 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/PrimaryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="145" selection-end-column="28" />
+        <state relative-caret-position="2310">
+          <caret line="142" selection-start-line="142" selection-end-line="145" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#11499#11500#0" expanded="true" />
-            <element signature="e#11533#11534#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageTextController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="104" column="55" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="55" />
+        <state relative-caret-position="1470">
+          <caret line="103" column="31" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/models/TextModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/TextFieldController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/ImageCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/FrontEndImageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="9" selection-start-line="9" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgbackends/operations/ImageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="21" selection-start-line="21" selection-end-line="27" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/javafxtry/imgfrontends/StageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diagram.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="590.4679894179894" y="868.0">javafxtry.PrimaryController</node>
+            <node x="501.49999999999994" y="356.0">javafxtry.App</node>
+            <node x="259.75" y="1680.5">javafxtry.ImageTextController</node>
+            <node x="173.5" y="1064.0">javafxtry.ImageTextController.TextHandler</node>
+            <node x="1130.4088115588115" y="35.0">javafxtry.imgbackends.utils.DateTimeUtils</node>
+            <node x="1205.7549603174602" y="1087.0">javafxtry.ThumbnailViewController</node>
+            <node x="10.68048941798952" y="2120.0">javafxtry.TextFieldController</node>
+            <node x="1514.7549603174602" y="1018.0">javafxtry.ImageCutController.CropHandler</node>
+            <node x="167.0174603174603" y="23.5">javafxtry.imgfrontends.StageManager</node>
+            <node x="729.5" y="402.5">javafxtry.ImageCommand</node>
+            <node x="536.7674603174603" y="0.0">javafxtry.imgbackends.utils.Constants</node>
+            <node x="908.5" y="240.5">javafxtry.imgbackends.operations.ImageManager</node>
+            <node x="21.5" y="1087.5">javafxtry.models.TextModel</node>
+            <node x="1316.5" y="194.0">javafxtry.imgfrontends.FrontEndImageManager</node>
+            <node x="1416.3390059015055" y="1623.0">javafxtry.ImageCutController</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="javafxtry.ImageCutController.CropHandler" target="javafxtry.imgfrontends.FrontEndImageManager">
+              <point x="92.0" y="-142.5" />
+              <point x="1790.7549603174602" y="728.0" />
+              <point x="1534.611111111111" y="728.0" />
+              <point x="67.11111111111109" y="247.0" />
+            </edge>
+            <edge source="javafxtry.TextFieldController" target="javafxtry.ImageTextController">
+              <point x="100.0" y="-119.5" />
+              <point x="235.68048941798952" y="2100.0" />
+              <point x="403.75" y="2100.0" />
+              <point x="0.0" y="166.0" />
+            </edge>
+            <edge source="javafxtry.PrimaryController" target="javafxtry.imgfrontends.StageManager">
+              <point x="-128.0" y="-292.5" />
+              <point x="606.4679894179894" y="778.0" />
+              <point x="297.0174603174603" y="778.0" />
+              <point x="297.0174603174603" y="174.0" />
+              <point x="312.2674603174603" y="174.0" />
+              <point x="20.75" y="38.5" />
+            </edge>
+            <edge source="javafxtry.PrimaryController" target="javafxtry.imgbackends.utils.Constants">
+              <point x="-32.0" y="-292.5" />
+              <point x="702.4679894179894" y="778.0" />
+              <point x="719.0" y="778.0" />
+              <point x="719.0" y="174.0" />
+              <point x="699.1674603174604" y="174.0" />
+              <point x="46.400000000000034" y="62.0" />
+            </edge>
+            <edge source="javafxtry.ImageTextController" target="javafxtry.imgfrontends.FrontEndImageManager">
+              <point x="133.71428571428567" y="-166.0" />
+              <point x="537.4642857142857" y="1533.0" />
+              <point x="1504.2549603174602" y="1533.0" />
+              <point x="1504.2549603174602" y="848.0" />
+              <point x="1501.0555555555554" y="848.0" />
+              <point x="33.55555555555543" y="247.0" />
+            </edge>
+            <edge source="javafxtry.ImageTextController" target="javafxtry.imgfrontends.StageManager">
+              <point x="-72.00000000000006" y="-166.0" />
+              <point x="331.74999999999994" y="1553.0" />
+              <point x="163.0" y="1553.0" />
+              <point x="163.0" y="174.0" />
+              <point x="229.2674603174603" y="174.0" />
+              <point x="-62.25" y="38.5" />
+            </edge>
+            <edge source="javafxtry.ImageCutController.CropHandler" target="javafxtry.ImageCutController">
+              <point x="46.0" y="142.5" />
+              <point x="1744.7549603174602" y="1563.0" />
+              <point x="1560.3390059015057" y="1563.0" />
+              <point x="1.1368683772161603E-13" y="-223.5" />
+            </edge>
+            <edge source="javafxtry.ImageCutController" target="javafxtry.ImageCutController.CropHandler">
+              <point x="-31.999999999999886" y="-223.5" />
+              <point x="1528.3390059015057" y="1553.0" />
+              <point x="1652.7549603174602" y="1553.0" />
+              <point x="-46.0" y="142.5" />
+            </edge>
+            <edge source="javafxtry.imgbackends.operations.ImageManager" target="javafxtry.imgbackends.utils.Constants">
+              <point x="-97.0" y="-200.5" />
+              <point x="1005.5" y="174.0" />
+              <point x="745.5674603174604" y="174.0" />
+              <point x="92.80000000000007" y="62.0" />
+            </edge>
+            <edge source="javafxtry.ImageCutController.CropHandler" target="javafxtry.imgbackends.operations.ImageManager">
+              <point x="-92.0" y="-142.5" />
+              <point x="1606.7549603174602" y="738.0" />
+              <point x="1268.7857142857142" y="738.0" />
+              <point x="166.28571428571422" y="200.5" />
+            </edge>
+            <edge source="javafxtry.App" target="javafxtry.imgbackends.utils.Constants">
+              <point x="51.75" y="-85.0" />
+              <point x="656.75" y="174.0" />
+              <point x="652.7674603174603" y="174.0" />
+              <point x="0.0" y="62.0" />
+            </edge>
+            <edge source="javafxtry.ImageTextController" target="javafxtry.ImageTextController.TextHandler">
+              <point x="-30.85714285714289" y="-166.0" />
+              <point x="372.8928571428571" y="1533.0" />
+              <point x="288.625" y="1533.0" />
+              <point x="-38.375" y="96.5" />
+            </edge>
+            <edge source="javafxtry.ImageCutController" target="javafxtry.ImageCommand">
+              <point x="-95.99999999999989" y="-223.5" />
+              <point x="1464.3390059015057" y="1493.0" />
+              <point x="1020.7299603174602" y="1493.0" />
+              <point x="1020.7299603174602" y="778.0" />
+              <point x="848.75" y="778.0" />
+              <point x="39.75" y="38.5" />
+            </edge>
+            <edge source="javafxtry.App" target="javafxtry.PrimaryController">
+              <point x="25.875" y="85.0" />
+              <point x="630.875" y="758.0" />
+              <point x="670.4679894179894" y="758.0" />
+              <point x="-64.0" y="-292.5" />
+            </edge>
+            <edge source="javafxtry.TextFieldController" target="javafxtry.imgbackends.utils.Constants">
+              <point x="-50.0" y="-119.5" />
+              <point x="85.68048941798952" y="2090.0" />
+              <point x="11.0" y="2090.0" />
+              <point x="11.0" y="848.0" />
+              <point x="334.0174603174603" y="848.0" />
+              <point x="334.0174603174603" y="164.0" />
+              <point x="559.9674603174603" y="164.0" />
+              <point x="-92.80000000000001" y="62.0" />
+            </edge>
+            <edge source="javafxtry.ImageTextController.TextHandler" target="javafxtry.ImageTextController">
+              <point x="38.375" y="96.5" />
+              <point x="365.375" y="1523.0" />
+              <point x="393.46428571428567" y="1523.0" />
+              <point x="-10.285714285714334" y="-166.0" />
+            </edge>
+            <edge source="javafxtry.TextFieldController" target="javafxtry.imgfrontends.StageManager">
+              <point x="-100.0" y="-119.5" />
+              <point x="35.68048941798952" y="2100.0" />
+              <point x="0.0" y="2100.0" />
+              <point x="0.0" y="164.0" />
+              <point x="187.7674603174603" y="164.0" />
+              <point x="-103.75" y="38.5" />
+            </edge>
+            <edge source="javafxtry.TextFieldController" target="javafxtry.models.TextModel">
+              <point x="0.0" y="-119.5" />
+              <point x="135.68048941798952" y="2100.0" />
+              <point x="96.68048941798952" y="2100.0" />
+              <point x="96.68048941798952" y="1603.0" />
+              <point x="34.60000000000002" y="1603.0" />
+              <point x="-52.39999999999998" y="73.0" />
+            </edge>
+            <edge source="javafxtry.ImageTextController" target="javafxtry.imgbackends.operations.ImageManager">
+              <point x="92.57142857142856" y="-166.0" />
+              <point x="496.32142857142856" y="1513.0" />
+              <point x="962.0799603174603" y="1513.0" />
+              <point x="962.0799603174603" y="818.0" />
+              <point x="1102.5" y="818.0" />
+              <point x="0.0" y="200.5" />
+            </edge>
+            <edge source="javafxtry.ImageCutController" target="javafxtry.PrimaryController">
+              <point x="-127.99999999999989" y="-223.5" />
+              <point x="1432.3390059015057" y="1503.0" />
+              <point x="806.4679894179894" y="1503.0" />
+              <point x="72.0" y="292.5" />
+            </edge>
+            <edge source="javafxtry.ImageCutController" target="javafxtry.imgfrontends.FrontEndImageManager">
+              <point x="96.00000000000011" y="-223.5" />
+              <point x="1656.3390059015057" y="1593.0" />
+              <point x="1904.25496031746" y="1593.0" />
+              <point x="1904.25496031746" y="708.0" />
+              <point x="1601.7222222222222" y="708.0" />
+              <point x="134.22222222222217" y="247.0" />
+            </edge>
+            <edge source="javafxtry.ImageTextController.TextHandler" target="javafxtry.App">
+              <point x="76.75" y="-96.5" />
+              <point x="403.75" y="848.0" />
+              <point x="527.375" y="848.0" />
+              <point x="-77.625" y="85.0" />
+            </edge>
+            <edge source="javafxtry.App" target="javafxtry.imgfrontends.StageManager">
+              <point x="-51.75" y="-85.0" />
+              <point x="553.25" y="154.0" />
+              <point x="353.76746031746023" y="154.0" />
+              <point x="62.24999999999994" y="38.5" />
+            </edge>
+            <edge source="javafxtry.ImageTextController" target="javafxtry.models.TextModel">
+              <point x="-133.71428571428578" y="-166.0" />
+              <point x="270.0357142857142" y="1583.0" />
+              <point x="87.0" y="1583.0" />
+              <point x="0.0" y="73.0" />
+            </edge>
+            <edge source="javafxtry.ImageCutController" target="javafxtry.imgfrontends.StageManager">
+              <point x="128.0000000000001" y="-223.5" />
+              <point x="1688.3390059015057" y="1603.0" />
+              <point x="1915.25496031746" y="1603.0" />
+              <point x="1915.25496031746" y="144.0" />
+              <point x="395.26746031746023" y="144.0" />
+              <point x="103.74999999999994" y="38.5" />
+            </edge>
+            <edge source="javafxtry.imgbackends.operations.ImageManager" target="javafxtry.imgbackends.utils.DateTimeUtils">
+              <point x="97.0" y="-200.5" />
+              <point x="1199.5" y="174.0" />
+              <point x="1234.9088115588115" y="174.0" />
+              <point x="0.0" y="27.0" />
+            </edge>
+            <edge source="javafxtry.ThumbnailViewController" target="javafxtry.imgfrontends.FrontEndImageManager">
+              <point x="115.20000000000005" y="-73.5" />
+              <point x="1464.9549603174603" y="848.0" />
+              <point x="1467.5" y="848.0" />
+              <point x="0.0" y="247.0" />
+            </edge>
+            <edge source="javafxtry.ImageTextController" target="javafxtry.imgbackends.utils.Constants">
+              <point x="30.85714285714289" y="-166.0" />
+              <point x="434.6071428571429" y="1483.0" />
+              <point x="490.99999999999994" y="1483.0" />
+              <point x="490.99999999999994" y="174.0" />
+              <point x="606.3674603174603" y="174.0" />
+              <point x="-46.39999999999998" y="62.0" />
+            </edge>
+            <edge source="javafxtry.ThumbnailViewController" target="javafxtry.App">
+              <point x="-115.20000000000005" y="-73.5" />
+              <point x="1234.5549603174602" y="768.0" />
+              <point x="682.625" y="768.0" />
+              <point x="77.625" y="85.0" />
+            </edge>
+            <edge source="javafxtry.PrimaryController" target="javafxtry.App">
+              <point x="-96.0" y="-292.5" />
+              <point x="638.4679894179894" y="768.0" />
+              <point x="579.125" y="768.0" />
+              <point x="-25.875" y="85.0" />
+            </edge>
+            <edge source="javafxtry.ImageTextController" target="javafxtry.PrimaryController">
+              <point x="72.0" y="-166.0" />
+              <point x="475.75" y="1503.0" />
+              <point x="662.4679894179894" y="1503.0" />
+              <point x="-72.0" y="292.5" />
+            </edge>
+            <edge source="javafxtry.ThumbnailViewController" target="javafxtry.imgbackends.operations.ImageManager">
+              <point x="0.0" y="-73.5" />
+              <point x="1349.7549603174602" y="748.0" />
+              <point x="1213.357142857143" y="748.0" />
+              <point x="110.85714285714289" y="200.5" />
+            </edge>
+            <edge source="javafxtry.ImageTextController.TextHandler" target="javafxtry.imgfrontends.StageManager">
+              <point x="-76.75" y="-96.5" />
+              <point x="250.25" y="838.0" />
+              <point x="286.0174603174603" y="838.0" />
+              <point x="286.0174603174603" y="174.0" />
+              <point x="270.7674603174603" y="174.0" />
+              <point x="-20.75" y="38.5" />
+            </edge>
+            <edge source="javafxtry.PrimaryController" target="javafxtry.imgfrontends.FrontEndImageManager">
+              <point x="128.0" y="-292.5" />
+              <point x="862.4679894179894" y="838.0" />
+              <point x="1366.8333333333333" y="838.0" />
+              <point x="-100.66666666666674" y="247.0" />
+            </edge>
+            <edge source="javafxtry.PrimaryController" target="javafxtry.ImageCommand">
+              <point x="0.0" y="-292.5" />
+              <point x="734.4679894179894" y="778.0" />
+              <point x="769.25" y="778.0" />
+              <point x="-39.75" y="38.5" />
+            </edge>
+            <edge source="javafxtry.PrimaryController" target="javafxtry.imgbackends.operations.ImageManager">
+              <point x="64.0" y="-292.5" />
+              <point x="798.4679894179894" y="808.0" />
+              <point x="1047.0714285714284" y="808.0" />
+              <point x="-55.42857142857156" y="200.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="967.5714285714284" y="919.0" />
+          <SelectedNodes>
+            <node>javafxtry.ImageCutController.CropHandler</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -1142,6 +1724,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

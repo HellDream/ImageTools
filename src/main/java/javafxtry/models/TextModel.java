@@ -1,11 +1,6 @@
 package javafxtry.models;
 
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import jdk.internal.dynalink.beans.StaticClass;
-
-import java.util.HashMap;
-import java.util.Map;
 /**
  * @ClassName TextModel
  * @Description model of text

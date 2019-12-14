@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafxtry.imgbackends.utils.Constants;
 import javafxtry.imgfrontends.StageManager;
@@ -27,11 +26,22 @@ public class TextFieldController implements Initializable {
     public Button submitBtn;
     public Button cancelBtn;
 
+    /**
+     * Submit text field
+     * @param event ActionEvent
+     */
     public void submit(ActionEvent event) {
         Color color = fontColor.getValue();
         Double fontsize = fontSize.getValue();
         String text = textField.getText();
         String fontFamily = font.getValue() == null ? "" : font.getValue().toString();
+        if(Constants.FONT_MAP.get(fontFamily)==null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText("Font not available");
+            alert.setContentText("The current font is not available. Please choose other font family.");
+            alert.showAndWait();
+            return;
+        }
         ImageTextController controller = (ImageTextController) StageManager.CONTROLLER.get("ImageTextController");
         if (controller == null)
             return;
@@ -44,7 +54,10 @@ public class TextFieldController implements Initializable {
         Stage currentStage = StageManager.STAGE.get("TextFieldStage");
         currentStage.close();
     }
-
+    /**
+     * Cancel submission
+     * @param event ActionEvent
+     */
     public void cancel(ActionEvent event) {
         Stage currentStage = StageManager.STAGE.get("TextFieldStage");
         currentStage.close();
